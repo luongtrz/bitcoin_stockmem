@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.local
+
+# Cache & DB
+cache/
+__pycache__/
+*.pyc
+*.db
+
+# IDE & tools
+.claude/
