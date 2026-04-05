@@ -135,7 +135,7 @@ function clamp(val: number, min: number, max: number): number {
 
 export function generateMockData(
   startDate: string,
-  numDays = 365,
+  numDays = 1825,
   asset = "BTC"
 ): DailyJsonInput[] {
   const results: DailyJsonInput[] = [];

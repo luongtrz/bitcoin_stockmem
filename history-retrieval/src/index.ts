@@ -36,12 +36,12 @@ function parseArgs(): { mode: string; searchInput?: string } {
 // ----------------------------------------------------------------
 
 function doGenerateMock(): void {
-  console.log("=== Tao 365 ngay mock data ===");
+  console.log("=== Tao 1825 ngay (5 nam) mock data ===");
 
   clearAllRecords();
 
-  const startDate = "2025-04-05"; // 1 nam truoc
-  const mockData = generateMockData(startDate, 365, "BTC");
+  const startDate = "2021-04-05"; // 5 nam truoc
+  const mockData = generateMockData(startDate, 1825, "BTC");
 
   console.log(`Da tao ${mockData.length} ban ghi mock`);
 
