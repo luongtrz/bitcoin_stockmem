@@ -1,25 +1,34 @@
 /**
- * Cosine similarity search: tim Top-K ban ghi gan nhat voi vector dau vao.
+ * Euclidean distance search: tim Top-K ban ghi gan nhat voi vector dau vao.
+ *
+ * Dung Euclidean distance thay vi cosine similarity vi:
+ * - Cosine do goc giua 2 vector -> khi tat ca gia tri deu duong (0-1),
+ *   moi vector deu chi cung huong -> score luon cao (~0.95) du gia tri rat khac nhau
+ * - Euclidean do khoang cach thuc su -> RSI=20 vs RSI=50 se co khoang cach lon
+ *
+ * Score = 1 / (1 + distance) -> cang gan 1 cang giong, cang gan 0 cang khac
  */
 
 import type { DailyJsonInput, SearchResult, StoredRecord } from "./types";
 
 /**
- * Cosine similarity giua 2 vector.
- * Tra ve gia tri tu -1 den 1 (1 = giong nhat).
+ * Euclidean distance giua 2 vector.
  */
-export function cosineSimilarity(a: number[], b: number[]): number {
-  let dot = 0;
-  let normA = 0;
-  let normB = 0;
+export function euclideanDistance(a: number[], b: number[]): number {
+  let sum = 0;
   for (let i = 0; i < a.length; i++) {
-    dot += a[i] * b[i];
-    normA += a[i] * a[i];
-    normB += b[i] * b[i];
+    const diff = a[i] - b[i];
+    sum += diff * diff;
   }
-  const denom = Math.sqrt(normA) * Math.sqrt(normB);
-  if (denom === 0) return 0;
-  return dot / denom;
+  return Math.sqrt(sum);
+}
+
+/**
+ * Chuyen distance thanh similarity score (0-1).
+ * Cang gan -> score cang cao.
+ */
+export function distanceToScore(distance: number): number {
+  return 1 / (1 + distance);
 }
 
 /**
@@ -39,7 +48,8 @@ export function searchTopK(
 
   for (const rec of records) {
     const storedVec: number[] = JSON.parse(rec.vector);
-    const score = cosineSimilarity(queryVector, storedVec);
+    const dist = euclideanDistance(queryVector, storedVec);
+    const score = distanceToScore(dist);
     const originalJson: DailyJsonInput = JSON.parse(rec.json_data);
     scored.push({ score, record: originalJson });
   }
@@ -54,3 +64,4 @@ export function searchTopK(
     record: item.record,
   }));
 }
+
