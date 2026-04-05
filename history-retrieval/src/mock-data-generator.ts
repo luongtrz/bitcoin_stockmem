@@ -1,17 +1,17 @@
 /**
- * Tao 365 ngay du lieu mock BTC.
+ * Tao 10 nam du lieu mock BTC.
  *
- * - Gia BTC: random walk co trend (60k - 100k USD)
- * - RSI, MSI, Fear & Greed: tuong quan voi gia va gia thay doi
- * - Sentiment: co bias theo huong gia
- * - Factors: ngau nhien tu danh sach co san
- * - Text: tu dong sinh tu template
+ * - Gia BTC: random walk co trend, co bull/bear cycle (3k - 200k USD)
+ * - RSI, MSI, Fear & Greed: tuong quan nhung random cao
+ * - Sentiment: da dang, noise lon
+ * - Factors: nhieu hon, pha tron nhieu kieu
+ * - Text: da dang template hon
  */
 
 import type { DailyJsonInput } from "./types";
 
 // ----------------------------------------------------------------
-// Danh sach factors mau
+// Danh sach factors mau - MO RONG
 // ----------------------------------------------------------------
 
 const BULLISH_FACTORS = [
@@ -35,6 +35,26 @@ const BULLISH_FACTORS = [
   "DXY dollar index giam",
   "BTC dominance tang",
   "Payment integration moi",
+  "Grayscale GBTC premium tang",
+  "MicroStrategy mua them BTC",
+  "El Salvador tang tru luong BTC",
+  "Lightning Network adoption tang",
+  "Defi TVL tren Bitcoin tang",
+  "Fidelity mo dich vu custody BTC",
+  "JP Morgan nhan dinh tich cuc ve BTC",
+  "Hash rate phuc hoi sau ban",
+  "Binance Proof of Reserve on dinh",
+  "Bitcoin spot volume tang ky luc",
+  "Mining difficulty dieu chinh giam",
+  "Central bank mua vang ky luc - tot cho BTC",
+  "Nasdaq tuong quan tich cuc voi crypto",
+  "Layer 2 scaling giai phap moi",
+  "Fed pivot signal - thi truong ky vong ha lai suat",
+  "US Treasury yield giam - dong tien chay vao risk assets",
+  "Ordinals va BRC-20 tang adoption",
+  "Bitcoin ETF options duoc phe duyet",
+  "Tether tang in USDT - thanh khoan do vao",
+  "Coinbase bao cao doanh thu vuot ky vong",
 ];
 
 const BEARISH_FACTORS = [
@@ -58,6 +78,26 @@ const BEARISH_FACTORS = [
   "Systemic risk lo ngai",
   "Rug pull du an lon",
   "Legal action chong lai founder",
+  "FTX su kien sap san",
+  "Terra Luna collapse anh huong",
+  "Celsius Network dong bang rut tien",
+  "Genesis Trading ngung hoat dong",
+  "Three Arrows Capital pha san",
+  "USDC depeg tam thoi",
+  "Mt. Gox phan phoi BTC cho chu no",
+  "SEC kien Binance va Coinbase",
+  "Silvergate Bank dong cua",
+  "Tether FUD - lo ngai du tru",
+  "mining ban tai Kazakhstan",
+  "Trung Quoc siet chat crypto lan nua",
+  "Iran cam mining tam thoi",
+  "US debt ceiling lo ngai",
+  "Grayscale GBTC discount mo rong",
+  "Leverage ratio qua cao - rui ro cascade liquidation",
+  "Dormant BTC wallet bat ngo chuyen tien",
+  "SEC dieu tra staking services",
+  "CBDC canh tranh voi crypto",
+  "Whale gui BTC len san voi so luong lon",
 ];
 
 const NEUTRAL_FACTORS = [
@@ -71,11 +111,49 @@ const NEUTRAL_FACTORS = [
   "On-chain flow binh thuong",
   "Testnet moi dang thu nghiem",
   "Industry report tong hop",
+  "Consolidation phase - thi truong tich luy",
+  "Funding rate trung tinh",
+  "Open interest on dinh",
+  "Hashrate on dinh khong doi",
+  "DXY di ngang",
+  "Macro data khong co gi dac biet",
+  "Options expiry cuoi tuan",
+  "Bitcoin Pizza Day - khong anh huong gia",
+  "Conference crypto tai chau Au",
+  "US Congress phien dieu tran ve crypto",
 ];
 
 // ----------------------------------------------------------------
-// Text templates
+// Text templates - DA DANG HON
 // ----------------------------------------------------------------
+
+const TEXT_TEMPLATES_BULL = [
+  "Thi truong co dau hieu tich cuc manh, nha dau tu lac quan.",
+  "Momentum tang ro ret, cac chi so ky thuat ung ho xu huong len.",
+  "Buy pressure tang dang ke, bulls nam quyen kiem soat.",
+  "Cau mua vuot cau ban, dong tien chay vao thi truong manh.",
+  "Breakout khoi vung khang cu, thi truong euphoric.",
+  "Smart money dang tich luy, tin hieu tich cuc dai han.",
+  "Thi truong risk-on, nha dau tu san sang chap nhan rui ro.",
+];
+
+const TEXT_TEMPLATES_BEAR = [
+  "Thi truong chiu ap luc ban manh, tam ly than trong.",
+  "Bears nam quyen, sell pressure tang cao.",
+  "Panic selling xuat hien, thi truong lo ngai.",
+  "Breakdown duoi vung ho tro, sentiment tieu cuc.",
+  "Dong tien rut ra, thanh khoan sut giam dang ke.",
+  "Capitulation phase, weak hands ban thao.",
+  "Fear lan rong, chi so tham lam giam manh.",
+];
+
+const TEXT_TEMPLATES_NEUTRAL = [
+  "Thi truong on dinh, cho tin hieu ro rang hon.",
+  "Range-bound trading, chua co xu huong ro.",
+  "Thi truong tich luy, ky vong doi tin hieu moi.",
+  "Consolidation phase, volume giao dich trung binh.",
+  "Thi truong bat dinh, nha dau tu ngoi ngoai.",
+];
 
 function generateText(
   date: string,
@@ -93,17 +171,15 @@ function generateText(
     text += `Cac yeu to chinh: ${factors.slice(0, 3).join("; ")}. `;
   }
 
-  if (changePct > 3) {
-    text += "Thi truong co dau hieu tich cuc manh, nha dau tu lac quan.";
-  } else if (changePct > 0) {
-    text += "Thi truong nhe nhang tich cuc.";
-  } else if (changePct < -3) {
-    text += "Thi truong chiu ap luc ban manh, tam ly than trong.";
-  } else if (changePct < 0) {
-    text += "Thi truong nhe nhang tieu cuc.";
+  let templates: string[];
+  if (changePct > 2) {
+    templates = TEXT_TEMPLATES_BULL;
+  } else if (changePct < -2) {
+    templates = TEXT_TEMPLATES_BEAR;
   } else {
-    text += "Thi truong on dinh, cho tin hieu ro rang hon.";
+    templates = TEXT_TEMPLATES_NEUTRAL;
   }
+  text += templates[Math.floor(Math.random() * templates.length)];
 
   return text;
 }
@@ -135,15 +211,16 @@ function clamp(val: number, min: number, max: number): number {
 
 export function generateMockData(
   startDate: string,
-  numDays = 1825,
+  numDays = 3650,
   asset = "BTC"
 ): DailyJsonInput[] {
   const results: DailyJsonInput[] = [];
 
-  // Khoi tao gia ban dau
-  let price = randBetween(65000, 80000);
+  // Khoi tao gia ban dau - range lon hon
+  let price = randBetween(3000, 20000);
   let trend = 0; // -1 bear, 0 neutral, 1 bull
   let trendDaysLeft = 0;
+  let cyclePhase = 0; // 0-3: accumulation, markup, distribution, markdown
 
   for (let day = 0; day < numDays; day++) {
     // Tinh ngay
@@ -151,53 +228,101 @@ export function generateMockData(
     d.setDate(d.getDate() + day);
     const dateStr = d.toISOString().slice(0, 10);
 
-    // Trend thay doi dinh ky
+    // Market cycle: thay doi moi ~600-900 ngay
+    if (day % randInt(600, 900) === 0) {
+      cyclePhase = (cyclePhase + 1) % 4;
+    }
+
+    // Trend thay doi dinh ky - thoi gian da dang hon
     if (trendDaysLeft <= 0) {
-      trend = randInt(-1, 1);
-      trendDaysLeft = randInt(10, 40); // 10-40 ngay moi trend
+      // Bias theo cycle phase
+      if (cyclePhase === 1) {
+        // markup: xu huong tang nhieu hon
+        trend = Math.random() < 0.7 ? 1 : randInt(-1, 0);
+      } else if (cyclePhase === 3) {
+        // markdown: xu huong giam nhieu hon
+        trend = Math.random() < 0.7 ? -1 : randInt(0, 1);
+      } else {
+        trend = randInt(-1, 1);
+      }
+      trendDaysLeft = randInt(5, 60); // 5-60 ngay moi trend (da dang hon)
     }
     trendDaysLeft--;
 
-    // Gia thay doi random walk + trend bias
-    const volatility = randBetween(0.5, 4.0);
-    const trendBias = trend * randBetween(0.3, 1.5);
-    const priceChangePct = trendBias + randBetween(-volatility, volatility);
+    // Gia thay doi random walk + trend bias - VOLATILITY CAO HON
+    const baseVolatility = randBetween(0.3, 5.5);
+    // Them black swan events (~2% ngay)
+    const isBlackSwan = Math.random() < 0.02;
+    const volatility = isBlackSwan ? randBetween(8, 15) : baseVolatility;
+
+    const trendBias = trend * randBetween(0.2, 2.0);
+    let priceChangePct = trendBias + randBetween(-volatility, volatility);
+
+    // Black swan co xu huong 1 phia
+    if (isBlackSwan) {
+      priceChangePct = Math.random() < 0.6
+        ? -Math.abs(priceChangePct)  // 60% crash
+        : Math.abs(priceChangePct);  // 40% pump
+    }
+
     price = price * (1 + priceChangePct / 100);
-    price = clamp(price, 30000, 150000);
+    price = clamp(price, 1000, 250000); // range gia lon hon
 
-    // RSI: tuong quan voi price change
-    const rsiBase = 50 + priceChangePct * 3;
-    const rsi = clamp(rsiBase + randBetween(-10, 10), 10, 95);
+    // RSI: tuong quan nhung noise lon hon
+    const rsiBase = 50 + priceChangePct * randBetween(2, 5);
+    const rsi = clamp(rsiBase + randBetween(-15, 15), 5, 98);
 
-    // MSI: tuong quan voi trend
-    const msiBase = 50 + trend * 15;
-    const msi = clamp(msiBase + randBetween(-10, 10), 10, 95);
+    // MSI: tuong quan voi trend nhung noise lon hon
+    const msiBase = 50 + trend * randBetween(8, 22);
+    const msi = clamp(msiBase + randBetween(-18, 18), 5, 98);
 
-    // Fear & Greed: tuong quan voi sentiment thi truong
-    const fgiBase = 50 + priceChangePct * 2 + trend * 10;
-    const fearGreedIndex = clamp(Math.round(fgiBase + randBetween(-8, 8)), 5, 95);
+    // Fear & Greed: da dang hon
+    const fgiBase = 50 + priceChangePct * randBetween(1, 4) + trend * randBetween(5, 15);
+    const fearGreedIndex = clamp(Math.round(fgiBase + randBetween(-15, 15)), 2, 98);
 
-    // Sentiment: tuong quan voi huong gia
-    const sentimentBase = priceChangePct > 0 ? 0.3 : priceChangePct < 0 ? -0.3 : 0;
+    // Sentiment: noise lon hon
+    const sentimentBase = priceChangePct > 0
+      ? randBetween(0.1, 0.5)
+      : priceChangePct < 0
+        ? randBetween(-0.5, -0.1)
+        : 0;
     const sentimentScoreAvg = clamp(
-      sentimentBase + randBetween(-0.4, 0.4),
+      sentimentBase + randBetween(-0.5, 0.5),
       -1, 1
     );
 
-    // Factors: chon theo huong thi truong
+    // Factors: da dang hon, so luong thay doi nhieu hon
     let factors: string[];
-    if (priceChangePct > 1.5) {
-      factors = pickRandom(BULLISH_FACTORS, randInt(2, 4));
-    } else if (priceChangePct < -1.5) {
-      factors = pickRandom(BEARISH_FACTORS, randInt(2, 4));
+    if (priceChangePct > 3) {
+      // Bullish manh: 3-5 factors
+      factors = pickRandom(BULLISH_FACTORS, randInt(3, 5));
+    } else if (priceChangePct > 1) {
+      // Nhe bullish: 2-3, co the pha 1 neutral
+      factors = pickRandom(BULLISH_FACTORS, randInt(2, 3));
+      if (Math.random() < 0.3) factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
+    } else if (priceChangePct < -3) {
+      // Bearish manh: 3-5 factors
+      factors = pickRandom(BEARISH_FACTORS, randInt(3, 5));
+    } else if (priceChangePct < -1) {
+      // Nhe bearish: 2-3, co the pha 1 neutral
+      factors = pickRandom(BEARISH_FACTORS, randInt(2, 3));
+      if (Math.random() < 0.3) factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
     } else {
-      const mixed = [...pickRandom(NEUTRAL_FACTORS, 1)];
-      if (Math.random() > 0.5) {
-        mixed.push(...pickRandom(BULLISH_FACTORS, 1));
-      } else {
-        mixed.push(...pickRandom(BEARISH_FACTORS, 1));
+      // Neutral: pha tron nhieu loai
+      const numFactors = randInt(1, 4);
+      factors = [];
+      for (let f = 0; f < numFactors; f++) {
+        const roll = Math.random();
+        if (roll < 0.4) {
+          factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
+        } else if (roll < 0.7) {
+          factors.push(...pickRandom(BULLISH_FACTORS, 1));
+        } else {
+          factors.push(...pickRandom(BEARISH_FACTORS, 1));
+        }
       }
-      factors = mixed;
+      // Loai bo trung lap
+      factors = [...new Set(factors)];
     }
 
     // Text tom tat
