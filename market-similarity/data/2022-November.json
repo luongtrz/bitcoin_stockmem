@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2022-11-01",
+    "price": 34243,
+    "arm": 1.5,
+    "srm": 0.67,
+    "factor_array": [
+      -0.36,
+      0.42,
+      0.17,
+      -0.43,
+      -0.29
+    ],
+    "pct_change": -1.3,
+    "text_summary": "Crypto markets slumped following ARK Invest regulatory investigation. Trading volumes surged 105% on panic selling."
+  },
+  {
+    "date": "2022-11-02",
+    "price": 34281,
+    "arm": 1.13,
+    "srm": 0.5,
+    "factor_array": [
+      -0.04,
+      0.34,
+      -0.4,
+      0.19,
+      -0.42
+    ],
+    "pct_change": 0.11,
+    "text_summary": "Bitcoin traded sideways as markets awaited GDP growth decision. Volume declined 504% from weekly average."
+  },
+  {
+    "date": "2022-11-03",
+    "price": 33578,
+    "arm": 1.68,
+    "srm": 0.93,
+    "factor_array": [
+      -0.88,
+      0.74,
+      -0.13,
+      -0.65,
+      0.44
+    ],
+    "pct_change": -2.05,
+    "text_summary": "Market crashed as UK announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2022-11-04",
+    "price": 33548,
+    "arm": 1.08,
+    "srm": 0.79,
+    "factor_array": [
+      -0.15,
+      0.35,
+      0.2,
+      -0.48,
+      -0.09
+    ],
+    "pct_change": -0.09,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-11-05",
+    "price": 33867,
+    "arm": 1.06,
+    "srm": 0.74,
+    "factor_array": [
+      0.14,
+      0.42,
+      -0.07,
+      0.58,
+      -0.31
+    ],
+    "pct_change": 0.95,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 145% from weekly average."
+  },
+  {
+    "date": "2022-11-06",
+    "price": 33623,
+    "arm": 0.92,
+    "srm": 0.6,
+    "factor_array": [
+      -0.36,
+      0.46,
+      0.59,
+      -0.25,
+      -0.24
+    ],
+    "pct_change": -0.72,
+    "text_summary": "Consolidation continued with BTC range-bound between 34K and 35K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-07",
+    "price": 33455,
+    "arm": 1.01,
+    "srm": 0.63,
+    "factor_array": [
+      0,
+      0.21,
+      -0.4,
+      -0.29,
+      0.35
+    ],
+    "pct_change": -0.5,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming employment announcement."
+  },
+  {
+    "date": "2022-11-08",
+    "price": 33850,
+    "arm": 0.53,
+    "srm": 0.61,
+    "factor_array": [
+      0.24,
+      0.62,
+      0.66,
+      0.32,
+      0.47
+    ],
+    "pct_change": 1.18,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 34K. Funding rates turned positive across major exchanges."
+  },
+  {
+    "date": "2022-11-09",
+    "price": 34097,
+    "arm": 0.95,
+    "srm": 0.72,
+    "factor_array": [
+      0.29,
+      0.41,
+      0.17,
+      0.18,
+      -0.08
+    ],
+    "pct_change": 0.73,
+    "text_summary": "Consolidation continued with BTC range-bound between 34K and 37K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-10",
+    "price": 34336,
+    "arm": 0.99,
+    "srm": 0.54,
+    "factor_array": [
+      0.14,
+      0.35,
+      0.49,
+      0.16,
+      -0.44
+    ],
+    "pct_change": 0.7,
+    "text_summary": "Bitcoin traded sideways as markets awaited PMI decision. Volume declined 852% from weekly average."
+  },
+  {
+    "date": "2022-11-11",
+    "price": 34532,
+    "arm": 0.87,
+    "srm": 0.78,
+    "factor_array": [
+      0.17,
+      0.25,
+      0.63,
+      0.55,
+      0.13
+    ],
+    "pct_change": 0.57,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming housing announcement."
+  },
+  {
+    "date": "2022-11-12",
+    "price": 34501,
+    "arm": 1.05,
+    "srm": 0.69,
+    "factor_array": [
+      0,
+      0.21,
+      -0.36,
+      -0.33,
+      0.03
+    ],
+    "pct_change": -0.09,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 37K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-13",
+    "price": 33742,
+    "arm": 1.58,
+    "srm": 0.94,
+    "factor_array": [
+      -0.74,
+      0.66,
+      0.14,
+      -0.39,
+      -0.49
+    ],
+    "pct_change": -2.2,
+    "text_summary": "Sharp sell-off triggered by unexpected wage growth data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2022-11-14",
+    "price": 34191,
+    "arm": 0.67,
+    "srm": 0.59,
+    "factor_array": [
+      0.65,
+      0.58,
+      0.46,
+      0.43,
+      0.21
+    ],
+    "pct_change": 1.33,
+    "text_summary": "Markets surged on positive regulatory developments in UK. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2022-11-15",
+    "price": 33473,
+    "arm": 1.48,
+    "srm": 0.85,
+    "factor_array": [
+      -0.58,
+      0.66,
+      -0.01,
+      -0.5,
+      -0.33
+    ],
+    "pct_change": -2.1,
+    "text_summary": "Selling pressure intensified after ARK Invest reported security breach. Market cap lost $757B in 24 hours."
+  },
+  {
+    "date": "2022-11-16",
+    "price": 33734,
+    "arm": 1.04,
+    "srm": 0.8,
+    "factor_array": [
+      0.26,
+      0.32,
+      -0.04,
+      0.45,
+      -0.25
+    ],
+    "pct_change": 0.78,
+    "text_summary": "Consolidation continued with BTC range-bound between 34K and 35K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-17",
+    "price": 33464,
+    "arm": 0.86,
+    "srm": 0.8,
+    "factor_array": [
+      -0.49,
+      0.39,
+      0.17,
+      -0.67,
+      -0.25
+    ],
+    "pct_change": -0.8,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming wage growth announcement."
+  },
+  {
+    "date": "2022-11-18",
+    "price": 33625,
+    "arm": 1.01,
+    "srm": 0.55,
+    "factor_array": [
+      0.06,
+      0.26,
+      0.11,
+      0.14,
+      -0.14
+    ],
+    "pct_change": 0.48,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-11-19",
+    "price": 33134,
+    "arm": 1.15,
+    "srm": 0.55,
+    "factor_array": [
+      -0.15,
+      0.43,
+      0.11,
+      -0.67,
+      -0.05
+    ],
+    "pct_change": -1.46,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. housing concerns weighed on sentiment."
+  },
+  {
+    "date": "2022-11-20",
+    "price": 34092,
+    "arm": 0.56,
+    "srm": 0.45,
+    "factor_array": [
+      1.09,
+      0.96,
+      0.53,
+      0.79,
+      -0.27
+    ],
+    "pct_change": 2.89,
+    "text_summary": "Markets pushed higher following Goldman Sachs's $558M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2022-11-21",
+    "price": 33986,
+    "arm": 0.9,
+    "srm": 0.68,
+    "factor_array": [
+      0.07,
+      0.43,
+      0.05,
+      -0.79,
+      -0.49
+    ],
+    "pct_change": -0.31,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2022-11-22",
+    "price": 33435,
+    "arm": 1.25,
+    "srm": 0.66,
+    "factor_array": [
+      -0.39,
+      0.49,
+      -0.42,
+      -0.55,
+      -0.21
+    ],
+    "pct_change": -1.62,
+    "text_summary": "Bearish reversal as whales moved 492K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2022-11-23",
+    "price": 33264,
+    "arm": 1.02,
+    "srm": 0.63,
+    "factor_array": [
+      -0.31,
+      0.34,
+      -0.24,
+      -0.11,
+      0.22
+    ],
+    "pct_change": -0.51,
+    "text_summary": "Bitcoin traded sideways as markets awaited retail sales decision. Volume declined 143% from weekly average."
+  },
+  {
+    "date": "2022-11-24",
+    "price": 33191,
+    "arm": 1.07,
+    "srm": 0.59,
+    "factor_array": [
+      0.14,
+      0.45,
+      -0.26,
+      -0.73,
+      -0.28
+    ],
+    "pct_change": -0.22,
+    "text_summary": "Consolidation continued with BTC range-bound between 33K and 34K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-25",
+    "price": 33101,
+    "arm": 1.03,
+    "srm": 0.55,
+    "factor_array": [
+      0.09,
+      0.55,
+      -0.33,
+      -0.31,
+      -0.46
+    ],
+    "pct_change": -0.27,
+    "text_summary": "Consolidation continued with BTC range-bound between 33K and 35K. Open interest remained flat."
+  },
+  {
+    "date": "2022-11-26",
+    "price": 32601,
+    "arm": 1.43,
+    "srm": 0.67,
+    "factor_array": [
+      -0.31,
+      0.77,
+      0.17,
+      -0.43,
+      0.19
+    ],
+    "pct_change": -1.51,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. Fed rate concerns weighed on sentiment."
+  },
+  {
+    "date": "2022-11-27",
+    "price": 32611,
+    "arm": 1.06,
+    "srm": 0.68,
+    "factor_array": [
+      0.14,
+      0.39,
+      -0.02,
+      0.7,
+      0.29
+    ],
+    "pct_change": 0.03,
+    "text_summary": "Bitcoin traded sideways as markets awaited housing decision. Volume declined 302% from weekly average."
+  },
+  {
+    "date": "2022-11-28",
+    "price": 32031,
+    "arm": 1.15,
+    "srm": 0.74,
+    "factor_array": [
+      -0.44,
+      0.51,
+      0.08,
+      -0.22,
+      -0.32
+    ],
+    "pct_change": -1.78,
+    "text_summary": "Crypto markets slumped following Binance regulatory investigation. Trading volumes surged 467% on panic selling."
+  },
+  {
+    "date": "2022-11-29",
+    "price": 32707,
+    "arm": 0.52,
+    "srm": 0.47,
+    "factor_array": [
+      0.61,
+      0.57,
+      0.09,
+      0.76,
+      0.14
+    ],
+    "pct_change": 2.11,
+    "text_summary": "Markets pushed higher following BlackRock's $609M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2022-11-30",
+    "price": 32472,
+    "arm": 1.13,
+    "srm": 0.51,
+    "factor_array": [
+      -0.19,
+      0.48,
+      -0.03,
+      -0.36,
+      -0.42
+    ],
+    "pct_change": -0.72,
+    "text_summary": "Consolidation continued with BTC range-bound between 32K and 33K. Open interest remained flat."
+  }
+]

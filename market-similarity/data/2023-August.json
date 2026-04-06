@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2023-08-01",
+    "price": 13226,
+    "arm": 1.17,
+    "srm": 0.96,
+    "factor_array": [
+      -0.58,
+      0.57,
+      -0.38,
+      -0.29,
+      0.24
+    ],
+    "pct_change": -2.02,
+    "text_summary": "Market crashed as Singapore announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-08-02",
+    "price": 13321,
+    "arm": 0.88,
+    "srm": 0.61,
+    "factor_array": [
+      0.28,
+      0.46,
+      0.15,
+      0.27,
+      0.27
+    ],
+    "pct_change": 0.72,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 16K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-03",
+    "price": 13320,
+    "arm": 0.88,
+    "srm": 0.62,
+    "factor_array": [
+      0.16,
+      0.13,
+      0.09,
+      -0.24,
+      0.34
+    ],
+    "pct_change": -0.01,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 14K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-04",
+    "price": 13348,
+    "arm": 1.02,
+    "srm": 0.69,
+    "factor_array": [
+      0.03,
+      0.2,
+      0.18,
+      0.36,
+      -0.43
+    ],
+    "pct_change": 0.21,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. China regulatory clarity still pending."
+  },
+  {
+    "date": "2023-08-05",
+    "price": 13293,
+    "arm": 0.93,
+    "srm": 0.7,
+    "factor_array": [
+      -0.1,
+      0.55,
+      0.23,
+      -0.54,
+      0.18
+    ],
+    "pct_change": -0.41,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 16K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-06",
+    "price": 13009,
+    "arm": 1.7,
+    "srm": 0.87,
+    "factor_array": [
+      -0.5,
+      0.61,
+      -0.13,
+      -0.24,
+      -0.2
+    ],
+    "pct_change": -2.14,
+    "text_summary": "Market crashed as India announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-08-07",
+    "price": 12643,
+    "arm": 1.6,
+    "srm": 0.95,
+    "factor_array": [
+      -0.75,
+      0.95,
+      0.17,
+      -0.49,
+      -0.03
+    ],
+    "pct_change": -2.81,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 703K BTC over the past 24 hours."
+  },
+  {
+    "date": "2023-08-08",
+    "price": 12749,
+    "arm": 0.94,
+    "srm": 0.64,
+    "factor_array": [
+      0.16,
+      0.33,
+      0.03,
+      0.52,
+      0.28
+    ],
+    "pct_change": 0.84,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2023-08-09",
+    "price": 12599,
+    "arm": 1.79,
+    "srm": 0.68,
+    "factor_array": [
+      -0.27,
+      0.62,
+      -0.05,
+      -0.35,
+      -0.26
+    ],
+    "pct_change": -1.18,
+    "text_summary": "Bearish reversal as whales moved 208K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2023-08-10",
+    "price": 12503,
+    "arm": 0.94,
+    "srm": 0.56,
+    "factor_array": [
+      -0.42,
+      0.27,
+      0.6,
+      -0.37,
+      -0.39
+    ],
+    "pct_change": -0.76,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 15K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-11",
+    "price": 12503,
+    "arm": 0.89,
+    "srm": 0.57,
+    "factor_array": [
+      -0.29,
+      0.39,
+      0.55,
+      -0.17,
+      -0.08
+    ],
+    "pct_change": 0,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2023-08-12",
+    "price": 12497,
+    "arm": 0.86,
+    "srm": 0.56,
+    "factor_array": [
+      0.03,
+      0.21,
+      0.11,
+      -0.75,
+      0.22
+    ],
+    "pct_change": -0.05,
+    "text_summary": "Bitcoin traded sideways as markets awaited PMI decision. Volume declined 203% from weekly average."
+  },
+  {
+    "date": "2023-08-13",
+    "price": 12642,
+    "arm": 0.69,
+    "srm": 0.5,
+    "factor_array": [
+      0.45,
+      0.37,
+      0.54,
+      0.1,
+      0.34
+    ],
+    "pct_change": 1.16,
+    "text_summary": "Crypto markets advanced on news of Grayscale integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2023-08-14",
+    "price": 13014,
+    "arm": 0.77,
+    "srm": 0.4,
+    "factor_array": [
+      0.89,
+      0.91,
+      0.29,
+      0.46,
+      -0.18
+    ],
+    "pct_change": 2.94,
+    "text_summary": "Bitcoin climbed amid dovish central bank signals. Trading volumes rose 152% as momentum traders joined the rally."
+  },
+  {
+    "date": "2023-08-15",
+    "price": 12984,
+    "arm": 0.87,
+    "srm": 0.51,
+    "factor_array": [
+      -0.11,
+      0.31,
+      0.27,
+      -0.74,
+      -0.28
+    ],
+    "pct_change": -0.23,
+    "text_summary": "Bitcoin traded sideways as markets awaited retail sales decision. Volume declined 765% from weekly average."
+  },
+  {
+    "date": "2023-08-16",
+    "price": 12753,
+    "arm": 1.55,
+    "srm": 0.65,
+    "factor_array": [
+      -0.77,
+      0.82,
+      -0.16,
+      -0.15,
+      -0.22
+    ],
+    "pct_change": -1.78,
+    "text_summary": "Market crashed as India announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-08-17",
+    "price": 12962,
+    "arm": 0.77,
+    "srm": 0.56,
+    "factor_array": [
+      0.29,
+      0.54,
+      0.5,
+      0.67,
+      -0.48
+    ],
+    "pct_change": 1.64,
+    "text_summary": "Bitcoin climbed amid dovish central bank signals. Trading volumes rose 665% as momentum traders joined the rally."
+  },
+  {
+    "date": "2023-08-18",
+    "price": 12970,
+    "arm": 1.04,
+    "srm": 0.53,
+    "factor_array": [
+      0,
+      0.5,
+      0.1,
+      0.29,
+      -0.48
+    ],
+    "pct_change": 0.06,
+    "text_summary": "Bitcoin traded sideways as markets awaited retail sales decision. Volume declined 898% from weekly average."
+  },
+  {
+    "date": "2023-08-19",
+    "price": 13035,
+    "arm": 1.02,
+    "srm": 0.64,
+    "factor_array": [
+      0.15,
+      0.53,
+      -0.27,
+      0.31,
+      -0.12
+    ],
+    "pct_change": 0.5,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2023-08-20",
+    "price": 12929,
+    "arm": 0.96,
+    "srm": 0.6,
+    "factor_array": [
+      -0.24,
+      0.41,
+      0.41,
+      -0.1,
+      0.01
+    ],
+    "pct_change": -0.81,
+    "text_summary": "Bitcoin traded sideways as markets awaited Fed rate decision. Volume declined 774% from weekly average."
+  },
+  {
+    "date": "2023-08-21",
+    "price": 12978,
+    "arm": 0.96,
+    "srm": 0.72,
+    "factor_array": [
+      0.32,
+      0.27,
+      0.09,
+      0.54,
+      0.37
+    ],
+    "pct_change": 0.38,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 14K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-22",
+    "price": 12912,
+    "arm": 1,
+    "srm": 0.59,
+    "factor_array": [
+      -0.25,
+      0.59,
+      0.35,
+      -0.74,
+      -0.23
+    ],
+    "pct_change": -0.51,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2023-08-23",
+    "price": 12611,
+    "arm": 1.6,
+    "srm": 0.98,
+    "factor_array": [
+      -0.74,
+      0.71,
+      -0.3,
+      -0.67,
+      -0.33
+    ],
+    "pct_change": -2.33,
+    "text_summary": "Bearish reversal as whales moved 521K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2023-08-24",
+    "price": 12635,
+    "arm": 1.14,
+    "srm": 0.7,
+    "factor_array": [
+      0.15,
+      0.23,
+      -0.17,
+      0.2,
+      -0.05
+    ],
+    "pct_change": 0.19,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. India regulatory clarity still pending."
+  },
+  {
+    "date": "2023-08-25",
+    "price": 12989,
+    "arm": 0.92,
+    "srm": 0.39,
+    "factor_array": [
+      0.58,
+      0.97,
+      0.5,
+      0.43,
+      0.45
+    ],
+    "pct_change": 2.8,
+    "text_summary": "Markets pushed higher following Binance's $880M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2023-08-26",
+    "price": 12959,
+    "arm": 1.1,
+    "srm": 0.59,
+    "factor_array": [
+      0.18,
+      0.47,
+      -0.24,
+      -0.75,
+      -0.19
+    ],
+    "pct_change": -0.23,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 16K. Open interest remained flat."
+  },
+  {
+    "date": "2023-08-27",
+    "price": 13008,
+    "arm": 0.86,
+    "srm": 0.76,
+    "factor_array": [
+      0.24,
+      0.57,
+      0.37,
+      0.42,
+      -0.3
+    ],
+    "pct_change": 0.38,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2023-08-28",
+    "price": 13151,
+    "arm": 0.69,
+    "srm": 0.72,
+    "factor_array": [
+      0.31,
+      0.53,
+      0.51,
+      0.39,
+      0.16
+    ],
+    "pct_change": 1.1,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2023-08-29",
+    "price": 12984,
+    "arm": 1.51,
+    "srm": 0.78,
+    "factor_array": [
+      -0.38,
+      0.68,
+      -0.34,
+      -0.29,
+      -0.12
+    ],
+    "pct_change": -1.27,
+    "text_summary": "Market crashed as UAE announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-08-30",
+    "price": 13254,
+    "arm": 0.75,
+    "srm": 0.31,
+    "factor_array": [
+      0.63,
+      0.78,
+      0.64,
+      0.24,
+      0.19
+    ],
+    "pct_change": 2.08,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 13K. Funding rates turned positive across major exchanges."
+  },
+  {
+    "date": "2023-08-31",
+    "price": 13050,
+    "arm": 1.62,
+    "srm": 0.57,
+    "factor_array": [
+      -0.4,
+      0.54,
+      -0.22,
+      -0.42,
+      0.36
+    ],
+    "pct_change": -1.54,
+    "text_summary": "BTC broke key support at 13K, triggering cascading liquidations. Over $671M in long positions wiped out."
+  }
+]

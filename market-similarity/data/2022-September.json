@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2022-09-01",
+    "price": 35981,
+    "arm": 1.4,
+    "srm": 0.62,
+    "factor_array": [
+      -0.56,
+      0.68,
+      -0.16,
+      -0.73,
+      0.03
+    ],
+    "pct_change": -1.82,
+    "text_summary": "Markets fell sharply as Morgan Stanley dumped 162K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2022-09-02",
+    "price": 36549,
+    "arm": 0.65,
+    "srm": 0.55,
+    "factor_array": [
+      0.55,
+      0.52,
+      0.11,
+      0.36,
+      -0.32
+    ],
+    "pct_change": 1.58,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $749M."
+  },
+  {
+    "date": "2022-09-03",
+    "price": 36121,
+    "arm": 1.25,
+    "srm": 0.64,
+    "factor_array": [
+      -0.37,
+      0.62,
+      -0.12,
+      -0.77,
+      -0.21
+    ],
+    "pct_change": -1.17,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 405K BTC over the past 24 hours."
+  },
+  {
+    "date": "2022-09-04",
+    "price": 35789,
+    "arm": 0.99,
+    "srm": 0.71,
+    "factor_array": [
+      -0.5,
+      0.64,
+      0.11,
+      -0.74,
+      0.15
+    ],
+    "pct_change": -0.92,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-09-05",
+    "price": 35810,
+    "arm": 1.04,
+    "srm": 0.67,
+    "factor_array": [
+      0.1,
+      0.38,
+      -0.41,
+      0.58,
+      -0.33
+    ],
+    "pct_change": 0.06,
+    "text_summary": "Consolidation continued with BTC range-bound between 36K and 39K. Open interest remained flat."
+  },
+  {
+    "date": "2022-09-06",
+    "price": 36193,
+    "arm": 0.84,
+    "srm": 0.78,
+    "factor_array": [
+      0.33,
+      0.63,
+      0.05,
+      0.22,
+      -0.36
+    ],
+    "pct_change": 1.07,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2022-09-07",
+    "price": 35744,
+    "arm": 1.27,
+    "srm": 0.76,
+    "factor_array": [
+      -0.39,
+      0.49,
+      -0.05,
+      -0.28,
+      0.16
+    ],
+    "pct_change": -1.24,
+    "text_summary": "Bitcoin dropped amid regulatory crackdown concerns in the US. Exchange outflows spiked as investors moved to stablecoins."
+  },
+  {
+    "date": "2022-09-08",
+    "price": 35122,
+    "arm": 1.27,
+    "srm": 0.54,
+    "factor_array": [
+      -0.46,
+      0.5,
+      -0.38,
+      -0.71,
+      -0.24
+    ],
+    "pct_change": -1.74,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 283K BTC over the past 24 hours."
+  },
+  {
+    "date": "2022-09-09",
+    "price": 34880,
+    "arm": 1,
+    "srm": 0.7,
+    "factor_array": [
+      -0.19,
+      0.58,
+      0.46,
+      -0.44,
+      0.34
+    ],
+    "pct_change": -0.69,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming GDP growth announcement."
+  },
+  {
+    "date": "2022-09-10",
+    "price": 34674,
+    "arm": 0.92,
+    "srm": 0.52,
+    "factor_array": [
+      -0.21,
+      0.42,
+      0.36,
+      -0.45,
+      -0.22
+    ],
+    "pct_change": -0.59,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2022-09-11",
+    "price": 34185,
+    "arm": 1.72,
+    "srm": 0.77,
+    "factor_array": [
+      -0.44,
+      0.57,
+      -0.18,
+      -0.45,
+      -0.1
+    ],
+    "pct_change": -1.41,
+    "text_summary": "BTC broke key support at 34K, triggering cascading liquidations. Over $438M in long positions wiped out."
+  },
+  {
+    "date": "2022-09-12",
+    "price": 34964,
+    "arm": 0.89,
+    "srm": 0.54,
+    "factor_array": [
+      0.75,
+      0.92,
+      0.25,
+      0.47,
+      -0.46
+    ],
+    "pct_change": 2.28,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $465M."
+  },
+  {
+    "date": "2022-09-13",
+    "price": 34555,
+    "arm": 1.14,
+    "srm": 0.59,
+    "factor_array": [
+      -0.05,
+      0.65,
+      -0.25,
+      -0.57,
+      0.17
+    ],
+    "pct_change": -1.17,
+    "text_summary": "Bitcoin dropped amid regulatory crackdown concerns in Hong Kong. Exchange outflows spiked as investors moved to stablecoins."
+  },
+  {
+    "date": "2022-09-14",
+    "price": 35457,
+    "arm": 0.73,
+    "srm": 0.46,
+    "factor_array": [
+      0.75,
+      0.84,
+      0.32,
+      0.1,
+      0.3
+    ],
+    "pct_change": 2.61,
+    "text_summary": "Crypto markets advanced on news of Coinbase integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2022-09-15",
+    "price": 34758,
+    "arm": 1.12,
+    "srm": 0.77,
+    "factor_array": [
+      -0.6,
+      0.8,
+      -0.45,
+      -0.39,
+      -0.44
+    ],
+    "pct_change": -1.97,
+    "text_summary": "Selling pressure intensified after Citadel reported security breach. Market cap lost $142B in 24 hours."
+  },
+  {
+    "date": "2022-09-16",
+    "price": 34306,
+    "arm": 1.11,
+    "srm": 0.54,
+    "factor_array": [
+      -0.67,
+      0.57,
+      -0.45,
+      -0.31,
+      0.19
+    ],
+    "pct_change": -1.3,
+    "text_summary": "BTC broke key support at 34K, triggering cascading liquidations. Over $118M in long positions wiped out."
+  },
+  {
+    "date": "2022-09-17",
+    "price": 34045,
+    "arm": 0.95,
+    "srm": 0.77,
+    "factor_array": [
+      -0.19,
+      0.4,
+      0.67,
+      -0.37,
+      0.34
+    ],
+    "pct_change": -0.76,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-09-18",
+    "price": 34028,
+    "arm": 0.93,
+    "srm": 0.68,
+    "factor_array": [
+      -0.19,
+      0.17,
+      0.29,
+      -0.7,
+      -0.17
+    ],
+    "pct_change": -0.05,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming employment announcement."
+  },
+  {
+    "date": "2022-09-19",
+    "price": 34011,
+    "arm": 1.06,
+    "srm": 0.68,
+    "factor_array": [
+      -0.05,
+      0.34,
+      -0.22,
+      -0.34,
+      0.23
+    ],
+    "pct_change": -0.05,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. the US regulatory clarity still pending."
+  },
+  {
+    "date": "2022-09-20",
+    "price": 33997,
+    "arm": 1.06,
+    "srm": 0.55,
+    "factor_array": [
+      0.2,
+      0.29,
+      0.19,
+      -0.62,
+      0.11
+    ],
+    "pct_change": -0.04,
+    "text_summary": "Bitcoin traded sideways as markets awaited PMI decision. Volume declined 497% from weekly average."
+  },
+  {
+    "date": "2022-09-21",
+    "price": 34153,
+    "arm": 0.86,
+    "srm": 0.68,
+    "factor_array": [
+      -0.02,
+      0.38,
+      0.46,
+      0.57,
+      -0.33
+    ],
+    "pct_change": 0.46,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-09-22",
+    "price": 33986,
+    "arm": 1.12,
+    "srm": 0.63,
+    "factor_array": [
+      -0.08,
+      0.41,
+      0.08,
+      -0.13,
+      -0.16
+    ],
+    "pct_change": -0.49,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming employment announcement."
+  },
+  {
+    "date": "2022-09-23",
+    "price": 34411,
+    "arm": 0.95,
+    "srm": 0.54,
+    "factor_array": [
+      0.53,
+      0.63,
+      0.26,
+      0.51,
+      0.22
+    ],
+    "pct_change": 1.25,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2022-09-24",
+    "price": 34607,
+    "arm": 0.95,
+    "srm": 0.6,
+    "factor_array": [
+      0.17,
+      0.61,
+      0.58,
+      0.34,
+      -0.42
+    ],
+    "pct_change": 0.57,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2022-09-25",
+    "price": 34763,
+    "arm": 1.09,
+    "srm": 0.77,
+    "factor_array": [
+      0.08,
+      0.56,
+      0.09,
+      0.23,
+      -0.35
+    ],
+    "pct_change": 0.45,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 37K. Open interest remained flat."
+  },
+  {
+    "date": "2022-09-26",
+    "price": 34631,
+    "arm": 0.97,
+    "srm": 0.53,
+    "factor_array": [
+      0.15,
+      0.4,
+      0.02,
+      -0.62,
+      -0.31
+    ],
+    "pct_change": -0.38,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2022-09-27",
+    "price": 34922,
+    "arm": 1.02,
+    "srm": 0.51,
+    "factor_array": [
+      0.18,
+      0.5,
+      -0.33,
+      0.44,
+      0.26
+    ],
+    "pct_change": 0.84,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-09-28",
+    "price": 35303,
+    "arm": 0.71,
+    "srm": 0.71,
+    "factor_array": [
+      0.18,
+      0.36,
+      0.55,
+      0.16,
+      0.05
+    ],
+    "pct_change": 1.09,
+    "text_summary": "Bitcoin climbed amid dovish central bank signals. Trading volumes rose 272% as momentum traders joined the rally."
+  },
+  {
+    "date": "2022-09-29",
+    "price": 36006,
+    "arm": 0.65,
+    "srm": 0.72,
+    "factor_array": [
+      0.66,
+      0.64,
+      0.46,
+      0.42,
+      0.11
+    ],
+    "pct_change": 1.99,
+    "text_summary": "Positive sentiment drove Bitcoin higher as China approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2022-09-30",
+    "price": 35772,
+    "arm": 0.91,
+    "srm": 0.68,
+    "factor_array": [
+      -0.16,
+      0.38,
+      0.32,
+      -0.19,
+      0.35
+    ],
+    "pct_change": -0.65,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 350% from weekly average."
+  }
+]

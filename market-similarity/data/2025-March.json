@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2025-03-01",
+    "price": 34867,
+    "arm": 0.94,
+    "srm": 0.71,
+    "factor_array": [
+      -0.05,
+      0.31,
+      0.61,
+      0.24,
+      -0.16
+    ],
+    "pct_change": 0.82,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Singapore regulatory clarity still pending."
+  },
+  {
+    "date": "2025-03-02",
+    "price": 34818,
+    "arm": 0.96,
+    "srm": 0.79,
+    "factor_array": [
+      0.1,
+      0.18,
+      0,
+      -0.69,
+      0.04
+    ],
+    "pct_change": -0.14,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 37K. Open interest remained flat."
+  },
+  {
+    "date": "2025-03-03",
+    "price": 34574,
+    "arm": 1.07,
+    "srm": 0.6,
+    "factor_array": [
+      -0.07,
+      0.24,
+      0.07,
+      -0.57,
+      0.45
+    ],
+    "pct_change": -0.7,
+    "text_summary": "Consolidation continued with BTC range-bound between 35K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2025-03-04",
+    "price": 34851,
+    "arm": 0.88,
+    "srm": 0.75,
+    "factor_array": [
+      0.35,
+      0.33,
+      0.69,
+      0.71,
+      -0.24
+    ],
+    "pct_change": 0.8,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-05",
+    "price": 34447,
+    "arm": 1.11,
+    "srm": 0.63,
+    "factor_array": [
+      -0.09,
+      0.52,
+      -0.21,
+      -0.45,
+      0.04
+    ],
+    "pct_change": -1.16,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 844K BTC over the past 24 hours."
+  },
+  {
+    "date": "2025-03-06",
+    "price": 33903,
+    "arm": 1.74,
+    "srm": 0.77,
+    "factor_array": [
+      -0.52,
+      0.71,
+      -0.41,
+      -0.46,
+      0.18
+    ],
+    "pct_change": -1.58,
+    "text_summary": "Market crashed as UK announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2025-03-07",
+    "price": 33564,
+    "arm": 1.06,
+    "srm": 0.56,
+    "factor_array": [
+      -0.12,
+      0.7,
+      -0.15,
+      -0.36,
+      0.25
+    ],
+    "pct_change": -1,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-08",
+    "price": 33504,
+    "arm": 1.07,
+    "srm": 0.62,
+    "factor_array": [
+      0.07,
+      0.43,
+      -0.35,
+      -0.6,
+      0.29
+    ],
+    "pct_change": -0.18,
+    "text_summary": "Consolidation continued with BTC range-bound between 34K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2025-03-09",
+    "price": 34583,
+    "arm": 0.88,
+    "srm": 0.46,
+    "factor_array": [
+      0.89,
+      0.76,
+      0.67,
+      0.71,
+      -0.32
+    ],
+    "pct_change": 3.22,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $733M."
+  },
+  {
+    "date": "2025-03-10",
+    "price": 34085,
+    "arm": 1.57,
+    "srm": 0.59,
+    "factor_array": [
+      -0.23,
+      0.61,
+      0.07,
+      -0.3,
+      0.06
+    ],
+    "pct_change": -1.44,
+    "text_summary": "Crypto markets slumped following Binance regulatory investigation. Trading volumes surged 132% on panic selling."
+  },
+  {
+    "date": "2025-03-11",
+    "price": 34010,
+    "arm": 0.96,
+    "srm": 0.63,
+    "factor_array": [
+      0.08,
+      0.43,
+      0.66,
+      -0.69,
+      -0.27
+    ],
+    "pct_change": -0.22,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2025-03-12",
+    "price": 33204,
+    "arm": 1.25,
+    "srm": 0.91,
+    "factor_array": [
+      -0.75,
+      0.78,
+      -0.36,
+      -0.77,
+      0.44
+    ],
+    "pct_change": -2.37,
+    "text_summary": "Market crashed as Singapore announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2025-03-13",
+    "price": 33031,
+    "arm": 0.92,
+    "srm": 0.55,
+    "factor_array": [
+      -0.35,
+      0.31,
+      0.08,
+      -0.49,
+      -0.06
+    ],
+    "pct_change": -0.52,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 832% from weekly average."
+  },
+  {
+    "date": "2025-03-14",
+    "price": 33510,
+    "arm": 0.54,
+    "srm": 0.59,
+    "factor_array": [
+      0.26,
+      0.5,
+      0.02,
+      0.7,
+      -0.31
+    ],
+    "pct_change": 1.45,
+    "text_summary": "Markets surged on positive regulatory developments in China. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2025-03-15",
+    "price": 33021,
+    "arm": 1.13,
+    "srm": 0.71,
+    "factor_array": [
+      -0.28,
+      0.61,
+      0.18,
+      -0.44,
+      0.46
+    ],
+    "pct_change": -1.46,
+    "text_summary": "Sharp sell-off triggered by unexpected GDP growth data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2025-03-16",
+    "price": 33959,
+    "arm": 0.95,
+    "srm": 0.47,
+    "factor_array": [
+      0.79,
+      0.94,
+      0.04,
+      0.61,
+      0.38
+    ],
+    "pct_change": 2.84,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2025-03-17",
+    "price": 34244,
+    "arm": 1.04,
+    "srm": 0.77,
+    "factor_array": [
+      0.52,
+      0.66,
+      -0.33,
+      0.79,
+      0.17
+    ],
+    "pct_change": 0.84,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2025-03-18",
+    "price": 34614,
+    "arm": 0.73,
+    "srm": 0.75,
+    "factor_array": [
+      0.12,
+      0.4,
+      0.36,
+      0.4,
+      0.25
+    ],
+    "pct_change": 1.08,
+    "text_summary": "Strong buying pressure pushed BTC higher. Galaxy Digital announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2025-03-19",
+    "price": 34396,
+    "arm": 1.11,
+    "srm": 0.78,
+    "factor_array": [
+      0.04,
+      0.32,
+      -0.34,
+      -0.68,
+      0.4
+    ],
+    "pct_change": -0.63,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. EU regulatory clarity still pending."
+  },
+  {
+    "date": "2025-03-20",
+    "price": 34712,
+    "arm": 1.06,
+    "srm": 0.56,
+    "factor_array": [
+      0.49,
+      0.51,
+      0.2,
+      0.59,
+      0.12
+    ],
+    "pct_change": 0.92,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-21",
+    "price": 34417,
+    "arm": 0.9,
+    "srm": 0.51,
+    "factor_array": [
+      -0.32,
+      0.64,
+      0.51,
+      -0.65,
+      -0.08
+    ],
+    "pct_change": -0.85,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-22",
+    "price": 33897,
+    "arm": 1.62,
+    "srm": 0.67,
+    "factor_array": [
+      -0.21,
+      0.66,
+      -0.14,
+      -0.15,
+      -0.06
+    ],
+    "pct_change": -1.51,
+    "text_summary": "Bitcoin dropped amid regulatory crackdown concerns in UK. Exchange outflows spiked as investors moved to stablecoins."
+  },
+  {
+    "date": "2025-03-23",
+    "price": 34304,
+    "arm": 0.92,
+    "srm": 0.79,
+    "factor_array": [
+      0.08,
+      0.39,
+      0.22,
+      0.61,
+      0.23
+    ],
+    "pct_change": 1.2,
+    "text_summary": "Crypto markets advanced on news of Goldman Sachs integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2025-03-24",
+    "price": 34177,
+    "arm": 1.03,
+    "srm": 0.78,
+    "factor_array": [
+      -0.2,
+      0.22,
+      -0.12,
+      -0.55,
+      0.34
+    ],
+    "pct_change": -0.37,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-25",
+    "price": 33979,
+    "arm": 1,
+    "srm": 0.55,
+    "factor_array": [
+      -0.02,
+      0.24,
+      0.31,
+      -0.76,
+      -0.34
+    ],
+    "pct_change": -0.58,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-26",
+    "price": 33989,
+    "arm": 0.93,
+    "srm": 0.69,
+    "factor_array": [
+      0.25,
+      0.12,
+      0.64,
+      0.41,
+      -0.4
+    ],
+    "pct_change": 0.03,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-03-27",
+    "price": 33085,
+    "arm": 1.13,
+    "srm": 0.94,
+    "factor_array": [
+      -0.92,
+      0.87,
+      -0.41,
+      -0.41,
+      0.18
+    ],
+    "pct_change": -2.66,
+    "text_summary": "Markets fell sharply as Morgan Stanley dumped 392K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2025-03-28",
+    "price": 33277,
+    "arm": 1.09,
+    "srm": 0.67,
+    "factor_array": [
+      -0.02,
+      0.58,
+      -0.15,
+      0.69,
+      0.35
+    ],
+    "pct_change": 0.58,
+    "text_summary": "Consolidation continued with BTC range-bound between 33K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2025-03-29",
+    "price": 33101,
+    "arm": 1.07,
+    "srm": 0.62,
+    "factor_array": [
+      -0.24,
+      0.34,
+      -0.41,
+      -0.15,
+      -0.39
+    ],
+    "pct_change": -0.53,
+    "text_summary": "Consolidation continued with BTC range-bound between 33K and 36K. Open interest remained flat."
+  },
+  {
+    "date": "2025-03-30",
+    "price": 32856,
+    "arm": 0.92,
+    "srm": 0.66,
+    "factor_array": [
+      -0.42,
+      0.3,
+      0.61,
+      -0.24,
+      0
+    ],
+    "pct_change": -0.74,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2025-03-31",
+    "price": 33224,
+    "arm": 0.81,
+    "srm": 0.75,
+    "factor_array": [
+      0.32,
+      0.48,
+      0.62,
+      0.31,
+      0.07
+    ],
+    "pct_change": 1.12,
+    "text_summary": "Markets pushed higher following Tesla's $791M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  }
+]

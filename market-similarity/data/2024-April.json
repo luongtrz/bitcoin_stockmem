@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2024-04-01",
+    "price": 48059,
+    "arm": 0.89,
+    "srm": 0.76,
+    "factor_array": [
+      -0.49,
+      0.59,
+      0.48,
+      -0.43,
+      -0.01
+    ],
+    "pct_change": -0.65,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 49K. Open interest remained flat."
+  },
+  {
+    "date": "2024-04-02",
+    "price": 47578,
+    "arm": 0.89,
+    "srm": 0.63,
+    "factor_array": [
+      -0.12,
+      0.66,
+      0.27,
+      -0.42,
+      -0.17
+    ],
+    "pct_change": -1,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Hong Kong regulatory clarity still pending."
+  },
+  {
+    "date": "2024-04-03",
+    "price": 47783,
+    "arm": 1.11,
+    "srm": 0.54,
+    "factor_array": [
+      0.21,
+      0.33,
+      -0.09,
+      0.18,
+      0.43
+    ],
+    "pct_change": 0.43,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 684% from weekly average."
+  },
+  {
+    "date": "2024-04-04",
+    "price": 47587,
+    "arm": 1.06,
+    "srm": 0.77,
+    "factor_array": [
+      -0.37,
+      0.35,
+      -0.17,
+      -0.19,
+      -0.37
+    ],
+    "pct_change": -0.41,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-04-05",
+    "price": 48420,
+    "arm": 0.83,
+    "srm": 0.66,
+    "factor_array": [
+      0.81,
+      0.57,
+      0.09,
+      0.46,
+      0.44
+    ],
+    "pct_change": 1.75,
+    "text_summary": "Bitcoin climbed amid dovish central bank signals. Trading volumes rose 797% as momentum traders joined the rally."
+  },
+  {
+    "date": "2024-04-06",
+    "price": 49108,
+    "arm": 0.77,
+    "srm": 0.54,
+    "factor_array": [
+      0.51,
+      0.69,
+      0.09,
+      0.59,
+      -0.34
+    ],
+    "pct_change": 1.42,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 49K. Funding rates turned positive across major exchanges."
+  },
+  {
+    "date": "2024-04-07",
+    "price": 49216,
+    "arm": 1.08,
+    "srm": 0.53,
+    "factor_array": [
+      -0.05,
+      0.19,
+      0.19,
+      0.57,
+      0.44
+    ],
+    "pct_change": 0.22,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 218% from weekly average."
+  },
+  {
+    "date": "2024-04-08",
+    "price": 48995,
+    "arm": 0.96,
+    "srm": 0.8,
+    "factor_array": [
+      -0.2,
+      0.52,
+      0.37,
+      -0.18,
+      -0.31
+    ],
+    "pct_change": -0.45,
+    "text_summary": "Consolidation continued with BTC range-bound between 49K and 50K. Open interest remained flat."
+  },
+  {
+    "date": "2024-04-09",
+    "price": 49558,
+    "arm": 0.74,
+    "srm": 0.55,
+    "factor_array": [
+      0.5,
+      0.46,
+      0.6,
+      0.72,
+      0.05
+    ],
+    "pct_change": 1.15,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $869M."
+  },
+  {
+    "date": "2024-04-10",
+    "price": 49157,
+    "arm": 0.86,
+    "srm": 0.79,
+    "factor_array": [
+      0,
+      0.28,
+      0.68,
+      -0.14,
+      0.14
+    ],
+    "pct_change": -0.81,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 181% from weekly average."
+  },
+  {
+    "date": "2024-04-11",
+    "price": 47889,
+    "arm": 1.71,
+    "srm": 0.98,
+    "factor_array": [
+      -1.05,
+      0.82,
+      -0.27,
+      -0.19,
+      0.19
+    ],
+    "pct_change": -2.58,
+    "text_summary": "Sharp sell-off triggered by unexpected PMI data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2024-04-12",
+    "price": 47606,
+    "arm": 0.99,
+    "srm": 0.66,
+    "factor_array": [
+      -0.14,
+      0.55,
+      0.33,
+      -0.54,
+      0.43
+    ],
+    "pct_change": -0.59,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-04-13",
+    "price": 48196,
+    "arm": 0.89,
+    "srm": 0.55,
+    "factor_array": [
+      0.42,
+      0.5,
+      0.21,
+      0.28,
+      0.14
+    ],
+    "pct_change": 1.24,
+    "text_summary": "Positive sentiment drove Bitcoin higher as China approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2024-04-14",
+    "price": 48321,
+    "arm": 0.98,
+    "srm": 0.56,
+    "factor_array": [
+      -0.19,
+      0.2,
+      0.28,
+      0.12,
+      -0.26
+    ],
+    "pct_change": 0.26,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 492% from weekly average."
+  },
+  {
+    "date": "2024-04-15",
+    "price": 48422,
+    "arm": 0.93,
+    "srm": 0.65,
+    "factor_array": [
+      -0.09,
+      0.48,
+      0.28,
+      0.18,
+      -0.41
+    ],
+    "pct_change": 0.21,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming housing announcement."
+  },
+  {
+    "date": "2024-04-16",
+    "price": 48088,
+    "arm": 1.11,
+    "srm": 0.52,
+    "factor_array": [
+      -0.09,
+      0.3,
+      0.15,
+      -0.23,
+      0.29
+    ],
+    "pct_change": -0.69,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 49K. Open interest remained flat."
+  },
+  {
+    "date": "2024-04-17",
+    "price": 47718,
+    "arm": 0.97,
+    "srm": 0.77,
+    "factor_array": [
+      -0.49,
+      0.65,
+      0.11,
+      -0.75,
+      -0.01
+    ],
+    "pct_change": -0.77,
+    "text_summary": "Bitcoin traded sideways as markets awaited retail sales decision. Volume declined 261% from weekly average."
+  },
+  {
+    "date": "2024-04-18",
+    "price": 48658,
+    "arm": 0.62,
+    "srm": 0.59,
+    "factor_array": [
+      0.36,
+      0.87,
+      0.67,
+      0.14,
+      0.42
+    ],
+    "pct_change": 1.97,
+    "text_summary": "Markets surged on positive regulatory developments in Japan. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2024-04-19",
+    "price": 47057,
+    "arm": 1.71,
+    "srm": 0.98,
+    "factor_array": [
+      -1.02,
+      0.87,
+      -0.07,
+      -0.62,
+      0.27
+    ],
+    "pct_change": -3.29,
+    "text_summary": "Crypto markets slumped following Citadel regulatory investigation. Trading volumes surged 622% on panic selling."
+  },
+  {
+    "date": "2024-04-20",
+    "price": 46751,
+    "arm": 1.14,
+    "srm": 0.52,
+    "factor_array": [
+      -0.04,
+      0.3,
+      -0.09,
+      -0.41,
+      0.29
+    ],
+    "pct_change": -0.65,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 837% from weekly average."
+  },
+  {
+    "date": "2024-04-21",
+    "price": 46868,
+    "arm": 0.89,
+    "srm": 0.78,
+    "factor_array": [
+      0.15,
+      0.24,
+      0.22,
+      0.58,
+      0.46
+    ],
+    "pct_change": 0.25,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. EU regulatory clarity still pending."
+  },
+  {
+    "date": "2024-04-22",
+    "price": 48312,
+    "arm": 0.59,
+    "srm": 0.42,
+    "factor_array": [
+      0.81,
+      1,
+      0.25,
+      0.67,
+      -0.12
+    ],
+    "pct_change": 3.08,
+    "text_summary": "Markets pushed higher following Deutsche Bank's $725M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2024-04-23",
+    "price": 47993,
+    "arm": 1.07,
+    "srm": 0.64,
+    "factor_array": [
+      -0.35,
+      0.59,
+      0.03,
+      -0.77,
+      0.05
+    ],
+    "pct_change": -0.66,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-04-24",
+    "price": 47513,
+    "arm": 1.08,
+    "srm": 0.79,
+    "factor_array": [
+      -0.05,
+      0.62,
+      -0.03,
+      -0.7,
+      -0.12
+    ],
+    "pct_change": -1,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 50K. Open interest remained flat."
+  },
+  {
+    "date": "2024-04-25",
+    "price": 48382,
+    "arm": 0.82,
+    "srm": 0.58,
+    "factor_array": [
+      0.62,
+      0.73,
+      0.58,
+      0.62,
+      0.23
+    ],
+    "pct_change": 1.83,
+    "text_summary": "Bitcoin climbed amid dovish central bank signals. Trading volumes rose 648% as momentum traders joined the rally."
+  },
+  {
+    "date": "2024-04-26",
+    "price": 49398,
+    "arm": 0.54,
+    "srm": 0.51,
+    "factor_array": [
+      0.61,
+      0.77,
+      0.49,
+      0.28,
+      -0.36
+    ],
+    "pct_change": 2.1,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 541 million, signaling strong demand."
+  },
+  {
+    "date": "2024-04-27",
+    "price": 49423,
+    "arm": 1.01,
+    "srm": 0.78,
+    "factor_array": [
+      -0.06,
+      0.12,
+      0.18,
+      0.54,
+      -0.13
+    ],
+    "pct_change": 0.05,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Japan regulatory clarity still pending."
+  },
+  {
+    "date": "2024-04-28",
+    "price": 49275,
+    "arm": 1,
+    "srm": 0.64,
+    "factor_array": [
+      -0.02,
+      0.37,
+      0.47,
+      -0.3,
+      0.11
+    ],
+    "pct_change": -0.3,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-04-29",
+    "price": 49965,
+    "arm": 0.92,
+    "srm": 0.75,
+    "factor_array": [
+      0.28,
+      0.65,
+      0.37,
+      0.16,
+      0.09
+    ],
+    "pct_change": 1.4,
+    "text_summary": "Crypto markets advanced on news of JPMorgan integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2024-04-30",
+    "price": 50645,
+    "arm": 0.54,
+    "srm": 0.79,
+    "factor_array": [
+      0.11,
+      0.62,
+      0.17,
+      0.33,
+      0.35
+    ],
+    "pct_change": 1.36,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 51K. Funding rates turned positive across major exchanges."
+  }
+]

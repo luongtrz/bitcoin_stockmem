@@ -1,0 +1,437 @@
+[
+  {
+    "date": "2024-02-01",
+    "price": 47525,
+    "arm": 1.09,
+    "srm": 0.55,
+    "factor_array": [
+      0.16,
+      0.41,
+      0.1,
+      0.8,
+      0.2
+    ],
+    "pct_change": 0.03,
+    "text_summary": "Bitcoin traded sideways as markets awaited housing decision. Volume declined 282% from weekly average."
+  },
+  {
+    "date": "2024-02-02",
+    "price": 47449,
+    "arm": 0.9,
+    "srm": 0.65,
+    "factor_array": [
+      -0.24,
+      0.18,
+      0.24,
+      -0.27,
+      -0.37
+    ],
+    "pct_change": -0.16,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-02-03",
+    "price": 48574,
+    "arm": 0.69,
+    "srm": 0.4,
+    "factor_array": [
+      0.75,
+      0.89,
+      0.01,
+      0.2,
+      -0.3
+    ],
+    "pct_change": 2.37,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 49K. Funding rates turned positive across major exchanges."
+  },
+  {
+    "date": "2024-02-04",
+    "price": 48151,
+    "arm": 1.12,
+    "srm": 0.62,
+    "factor_array": [
+      0.01,
+      0.44,
+      -0.2,
+      -0.13,
+      -0.25
+    ],
+    "pct_change": -0.87,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2024-02-05",
+    "price": 48324,
+    "arm": 1,
+    "srm": 0.77,
+    "factor_array": [
+      0.15,
+      0.32,
+      0.26,
+      0.58,
+      0.05
+    ],
+    "pct_change": 0.36,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 50K. Open interest remained flat."
+  },
+  {
+    "date": "2024-02-06",
+    "price": 48754,
+    "arm": 0.91,
+    "srm": 0.69,
+    "factor_array": [
+      0.26,
+      0.54,
+      0.06,
+      0.47,
+      0.38
+    ],
+    "pct_change": 0.89,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2024-02-07",
+    "price": 47681,
+    "arm": 1.22,
+    "srm": 0.87,
+    "factor_array": [
+      -0.65,
+      0.72,
+      -0.37,
+      -0.78,
+      0.01
+    ],
+    "pct_change": -2.2,
+    "text_summary": "Market crashed as Japan announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2024-02-08",
+    "price": 48420,
+    "arm": 0.58,
+    "srm": 0.56,
+    "factor_array": [
+      0.39,
+      0.56,
+      0.47,
+      0.1,
+      -0.22
+    ],
+    "pct_change": 1.55,
+    "text_summary": "Markets surged on positive regulatory developments in South Korea. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2024-02-09",
+    "price": 48260,
+    "arm": 0.92,
+    "srm": 0.71,
+    "factor_array": [
+      0.12,
+      0.19,
+      0.55,
+      -0.3,
+      0.17
+    ],
+    "pct_change": -0.33,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-02-10",
+    "price": 48579,
+    "arm": 0.92,
+    "srm": 0.58,
+    "factor_array": [
+      0.19,
+      0.54,
+      0.48,
+      0.55,
+      0.28
+    ],
+    "pct_change": 0.66,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2024-02-11",
+    "price": 48778,
+    "arm": 0.95,
+    "srm": 0.77,
+    "factor_array": [
+      -0.05,
+      0.55,
+      0.29,
+      0.51,
+      -0.41
+    ],
+    "pct_change": 0.41,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. India regulatory clarity still pending."
+  },
+  {
+    "date": "2024-02-12",
+    "price": 48515,
+    "arm": 1.06,
+    "srm": 0.79,
+    "factor_array": [
+      -0.21,
+      0.4,
+      -0.46,
+      -0.2,
+      -0.33
+    ],
+    "pct_change": -0.54,
+    "text_summary": "Consolidation continued with BTC range-bound between 49K and 52K. Open interest remained flat."
+  },
+  {
+    "date": "2024-02-13",
+    "price": 48792,
+    "arm": 1.1,
+    "srm": 0.65,
+    "factor_array": [
+      0.32,
+      0.21,
+      -0.16,
+      0.61,
+      0.26
+    ],
+    "pct_change": 0.57,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2024-02-14",
+    "price": 47816,
+    "arm": 1.59,
+    "srm": 0.7,
+    "factor_array": [
+      -0.51,
+      0.73,
+      -0.13,
+      -0.46,
+      -0.4
+    ],
+    "pct_change": -2,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. housing concerns weighed on sentiment."
+  },
+  {
+    "date": "2024-02-15",
+    "price": 48481,
+    "arm": 0.81,
+    "srm": 0.7,
+    "factor_array": [
+      0.68,
+      0.42,
+      0.35,
+      0.77,
+      0.35
+    ],
+    "pct_change": 1.39,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2024-02-16",
+    "price": 48117,
+    "arm": 1.13,
+    "srm": 0.71,
+    "factor_array": [
+      -0.11,
+      0.36,
+      -0.31,
+      -0.45,
+      0.22
+    ],
+    "pct_change": -0.75,
+    "text_summary": "Bitcoin traded sideways as markets awaited employment decision. Volume declined 688% from weekly average."
+  },
+  {
+    "date": "2024-02-17",
+    "price": 47434,
+    "arm": 1.49,
+    "srm": 0.58,
+    "factor_array": [
+      -0.22,
+      0.42,
+      -0.29,
+      -0.71,
+      -0.4
+    ],
+    "pct_change": -1.42,
+    "text_summary": "Market crashed as South Korea announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2024-02-18",
+    "price": 46988,
+    "arm": 0.9,
+    "srm": 0.55,
+    "factor_array": [
+      -0.16,
+      0.34,
+      0.57,
+      -0.36,
+      0.15
+    ],
+    "pct_change": -0.94,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming GDP growth announcement."
+  },
+  {
+    "date": "2024-02-19",
+    "price": 48661,
+    "arm": 0.66,
+    "srm": 0.54,
+    "factor_array": [
+      0.91,
+      0.82,
+      0.07,
+      0.47,
+      0.25
+    ],
+    "pct_change": 3.56,
+    "text_summary": "Bullish breakout confirmed as BTC cleared key resistance at 49K. Funding rates turned positive across major exchanges."
+  },
+  {
+    "date": "2024-02-20",
+    "price": 48350,
+    "arm": 1.14,
+    "srm": 0.78,
+    "factor_array": [
+      -0.11,
+      0.34,
+      -0.2,
+      -0.34,
+      0.22
+    ],
+    "pct_change": -0.64,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2024-02-21",
+    "price": 47983,
+    "arm": 1.04,
+    "srm": 0.57,
+    "factor_array": [
+      -0.02,
+      0.58,
+      -0.43,
+      -0.69,
+      0.23
+    ],
+    "pct_change": -0.76,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming employment announcement."
+  },
+  {
+    "date": "2024-02-22",
+    "price": 47791,
+    "arm": 0.86,
+    "srm": 0.77,
+    "factor_array": [
+      -0.15,
+      0.29,
+      0.31,
+      -0.13,
+      -0.5
+    ],
+    "pct_change": -0.4,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 497% from weekly average."
+  },
+  {
+    "date": "2024-02-23",
+    "price": 47514,
+    "arm": 0.94,
+    "srm": 0.72,
+    "factor_array": [
+      -0.13,
+      0.39,
+      0.61,
+      -0.73,
+      -0.09
+    ],
+    "pct_change": -0.58,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 49K. Open interest remained flat."
+  },
+  {
+    "date": "2024-02-24",
+    "price": 47690,
+    "arm": 1.01,
+    "srm": 0.75,
+    "factor_array": [
+      -0.05,
+      0.45,
+      0.15,
+      0.71,
+      0.05
+    ],
+    "pct_change": 0.37,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. China regulatory clarity still pending."
+  },
+  {
+    "date": "2024-02-25",
+    "price": 47900,
+    "arm": 1.03,
+    "srm": 0.73,
+    "factor_array": [
+      -0.01,
+      0.49,
+      -0.2,
+      0.51,
+      0.16
+    ],
+    "pct_change": 0.44,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2024-02-26",
+    "price": 48025,
+    "arm": 0.88,
+    "srm": 0.77,
+    "factor_array": [
+      0.27,
+      0.42,
+      0.56,
+      0.29,
+      0.2
+    ],
+    "pct_change": 0.26,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 511% from weekly average."
+  },
+  {
+    "date": "2024-02-27",
+    "price": 47180,
+    "arm": 1.57,
+    "srm": 0.69,
+    "factor_array": [
+      -0.29,
+      0.56,
+      -0.23,
+      -0.5,
+      0.49
+    ],
+    "pct_change": -1.76,
+    "text_summary": "Bearish reversal as whales moved 858K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2024-02-28",
+    "price": 46680,
+    "arm": 1.68,
+    "srm": 0.63,
+    "factor_array": [
+      -0.21,
+      0.36,
+      0.01,
+      -0.76,
+      0.49
+    ],
+    "pct_change": -1.06,
+    "text_summary": "Markets fell sharply as MicroStrategy dumped 678K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2024-02-29",
+    "price": 47474,
+    "arm": 0.81,
+    "srm": 0.74,
+    "factor_array": [
+      0.55,
+      0.52,
+      0.48,
+      0.31,
+      0.41
+    ],
+    "pct_change": 1.7,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  }
+]

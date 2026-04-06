@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2024-12-01",
+    "price": 41704,
+    "arm": 1.45,
+    "srm": 0.99,
+    "factor_array": [
+      -0.93,
+      0.68,
+      0.02,
+      -0.1,
+      -0.36
+    ],
+    "pct_change": -2.17,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 203K BTC over the past 24 hours."
+  },
+  {
+    "date": "2024-12-02",
+    "price": 41337,
+    "arm": 0.92,
+    "srm": 0.68,
+    "factor_array": [
+      -0.33,
+      0.47,
+      0.4,
+      -0.48,
+      -0.37
+    ],
+    "pct_change": -0.88,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-03",
+    "price": 40994,
+    "arm": 1.01,
+    "srm": 0.62,
+    "factor_array": [
+      -0.03,
+      0.36,
+      -0.25,
+      -0.51,
+      0.38
+    ],
+    "pct_change": -0.83,
+    "text_summary": "Consolidation continued with BTC range-bound between 41K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2024-12-04",
+    "price": 40764,
+    "arm": 1.02,
+    "srm": 0.66,
+    "factor_array": [
+      -0.46,
+      0.32,
+      -0.09,
+      -0.64,
+      -0.25
+    ],
+    "pct_change": -0.56,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2024-12-05",
+    "price": 40727,
+    "arm": 1.08,
+    "srm": 0.76,
+    "factor_array": [
+      -0.13,
+      0.16,
+      0.13,
+      -0.75,
+      0.3
+    ],
+    "pct_change": -0.09,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2024-12-06",
+    "price": 40609,
+    "arm": 0.85,
+    "srm": 0.51,
+    "factor_array": [
+      0.11,
+      0.26,
+      0.45,
+      -0.2,
+      -0.28
+    ],
+    "pct_change": -0.29,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. the US regulatory clarity still pending."
+  },
+  {
+    "date": "2024-12-07",
+    "price": 40747,
+    "arm": 0.95,
+    "srm": 0.58,
+    "factor_array": [
+      -0.01,
+      0.39,
+      0.02,
+      0.4,
+      0.24
+    ],
+    "pct_change": 0.34,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Japan regulatory clarity still pending."
+  },
+  {
+    "date": "2024-12-08",
+    "price": 40340,
+    "arm": 1.12,
+    "srm": 0.58,
+    "factor_array": [
+      -0.34,
+      0.6,
+      -0.37,
+      -0.46,
+      0.04
+    ],
+    "pct_change": -1,
+    "text_summary": "Bitcoin traded sideways as markets awaited employment decision. Volume declined 753% from weekly average."
+  },
+  {
+    "date": "2024-12-09",
+    "price": 40122,
+    "arm": 1.14,
+    "srm": 0.54,
+    "factor_array": [
+      -0.41,
+      0.37,
+      -0.3,
+      -0.36,
+      -0.46
+    ],
+    "pct_change": -0.54,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 43K. Open interest remained flat."
+  },
+  {
+    "date": "2024-12-10",
+    "price": 40178,
+    "arm": 1.09,
+    "srm": 0.77,
+    "factor_array": [
+      -0.25,
+      0.42,
+      0.15,
+      0.25,
+      0.16
+    ],
+    "pct_change": 0.14,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2024-12-11",
+    "price": 39756,
+    "arm": 1.73,
+    "srm": 0.59,
+    "factor_array": [
+      -0.36,
+      0.54,
+      -0.38,
+      -0.64,
+      0.19
+    ],
+    "pct_change": -1.05,
+    "text_summary": "BTC broke key support at 40K, triggering cascading liquidations. Over $756M in long positions wiped out."
+  },
+  {
+    "date": "2024-12-12",
+    "price": 39947,
+    "arm": 0.87,
+    "srm": 0.59,
+    "factor_array": [
+      -0.16,
+      0.41,
+      0.33,
+      0.6,
+      0.33
+    ],
+    "pct_change": 0.48,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2024-12-13",
+    "price": 39548,
+    "arm": 1.07,
+    "srm": 0.74,
+    "factor_array": [
+      -0.47,
+      0.43,
+      -0.37,
+      -0.64,
+      -0.08
+    ],
+    "pct_change": -1,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-14",
+    "price": 39572,
+    "arm": 1.02,
+    "srm": 0.53,
+    "factor_array": [
+      -0.24,
+      0.49,
+      -0.34,
+      0.36,
+      -0.29
+    ],
+    "pct_change": 0.06,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2024-12-15",
+    "price": 40858,
+    "arm": 0.74,
+    "srm": 0.37,
+    "factor_array": [
+      1.13,
+      1.15,
+      0.33,
+      0.57,
+      -0.37
+    ],
+    "pct_change": 3.25,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $769M."
+  },
+  {
+    "date": "2024-12-16",
+    "price": 40760,
+    "arm": 0.86,
+    "srm": 0.65,
+    "factor_array": [
+      0.22,
+      0.2,
+      0.1,
+      -0.27,
+      0.5
+    ],
+    "pct_change": -0.24,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-17",
+    "price": 40797,
+    "arm": 0.85,
+    "srm": 0.67,
+    "factor_array": [
+      -0.11,
+      0.13,
+      0.33,
+      0.29,
+      0.41
+    ],
+    "pct_change": 0.09,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-18",
+    "price": 40907,
+    "arm": 1.11,
+    "srm": 0.78,
+    "factor_array": [
+      0.22,
+      0.41,
+      -0.16,
+      0.2,
+      0.01
+    ],
+    "pct_change": 0.27,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-19",
+    "price": 41234,
+    "arm": 0.88,
+    "srm": 0.55,
+    "factor_array": [
+      0.09,
+      0.34,
+      0.23,
+      0.7,
+      0.41
+    ],
+    "pct_change": 0.8,
+    "text_summary": "Bitcoin traded sideways as markets awaited Fed rate decision. Volume declined 201% from weekly average."
+  },
+  {
+    "date": "2024-12-20",
+    "price": 40793,
+    "arm": 1.19,
+    "srm": 0.71,
+    "factor_array": [
+      -0.55,
+      0.7,
+      0.19,
+      -0.26,
+      -0.11
+    ],
+    "pct_change": -1.07,
+    "text_summary": "Markets fell sharply as Galaxy Digital dumped 486K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2024-12-21",
+    "price": 40997,
+    "arm": 1.06,
+    "srm": 0.68,
+    "factor_array": [
+      -0.11,
+      0.48,
+      -0.29,
+      0.52,
+      0.4
+    ],
+    "pct_change": 0.5,
+    "text_summary": "Consolidation continued with BTC range-bound between 41K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2024-12-22",
+    "price": 41546,
+    "arm": 0.82,
+    "srm": 0.71,
+    "factor_array": [
+      0.37,
+      0.43,
+      0.33,
+      0.65,
+      0.39
+    ],
+    "pct_change": 1.34,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 734 million, signaling strong demand."
+  },
+  {
+    "date": "2024-12-23",
+    "price": 42772,
+    "arm": 0.62,
+    "srm": 0.53,
+    "factor_array": [
+      1.17,
+      0.85,
+      0.24,
+      0.8,
+      -0.25
+    ],
+    "pct_change": 2.95,
+    "text_summary": "Strong buying pressure pushed BTC higher. Citadel announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2024-12-24",
+    "price": 43653,
+    "arm": 0.78,
+    "srm": 0.4,
+    "factor_array": [
+      0.71,
+      0.85,
+      0.18,
+      0.14,
+      -0.09
+    ],
+    "pct_change": 2.06,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 472 million, signaling strong demand."
+  },
+  {
+    "date": "2024-12-25",
+    "price": 43705,
+    "arm": 0.88,
+    "srm": 0.55,
+    "factor_array": [
+      0.23,
+      0.29,
+      0.38,
+      0.45,
+      0.18
+    ],
+    "pct_change": 0.12,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Singapore regulatory clarity still pending."
+  },
+  {
+    "date": "2024-12-26",
+    "price": 43303,
+    "arm": 1.01,
+    "srm": 0.66,
+    "factor_array": [
+      -0.3,
+      0.65,
+      -0.2,
+      -0.45,
+      -0.09
+    ],
+    "pct_change": -0.92,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-27",
+    "price": 42601,
+    "arm": 1.62,
+    "srm": 0.75,
+    "factor_array": [
+      -0.31,
+      0.49,
+      -0.44,
+      -0.21,
+      -0.47
+    ],
+    "pct_change": -1.62,
+    "text_summary": "Bitcoin declined on profit-taking after recent rally. Whale wallets distributed 285K BTC over the past 24 hours."
+  },
+  {
+    "date": "2024-12-28",
+    "price": 43010,
+    "arm": 1.09,
+    "srm": 0.64,
+    "factor_array": [
+      0.14,
+      0.69,
+      -0.16,
+      0.15,
+      -0.38
+    ],
+    "pct_change": 0.96,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-12-29",
+    "price": 43857,
+    "arm": 0.54,
+    "srm": 0.73,
+    "factor_array": [
+      0.84,
+      0.58,
+      0.51,
+      0.25,
+      -0.45
+    ],
+    "pct_change": 1.97,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 557 million, signaling strong demand."
+  },
+  {
+    "date": "2024-12-30",
+    "price": 44690,
+    "arm": 0.87,
+    "srm": 0.77,
+    "factor_array": [
+      0.52,
+      0.48,
+      0.57,
+      0.17,
+      0.13
+    ],
+    "pct_change": 1.9,
+    "text_summary": "Markets pushed higher following Tesla's $196M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2024-12-31",
+    "price": 45204,
+    "arm": 0.93,
+    "srm": 0.64,
+    "factor_array": [
+      0.57,
+      0.36,
+      0.02,
+      0.22,
+      0.41
+    ],
+    "pct_change": 1.15,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $416M."
+  }
+]

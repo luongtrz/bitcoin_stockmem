@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2023-01-01",
+    "price": 15064,
+    "arm": 0.95,
+    "srm": 0.62,
+    "factor_array": [
+      -0.24,
+      0.54,
+      0.02,
+      -0.75,
+      -0.22
+    ],
+    "pct_change": -0.37,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-02",
+    "price": 14993,
+    "arm": 1.04,
+    "srm": 0.71,
+    "factor_array": [
+      -0.08,
+      0.51,
+      0.14,
+      -0.4,
+      -0.47
+    ],
+    "pct_change": -0.47,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-03",
+    "price": 15098,
+    "arm": 1.04,
+    "srm": 0.56,
+    "factor_array": [
+      -0.06,
+      0.5,
+      -0.33,
+      0.11,
+      -0.15
+    ],
+    "pct_change": 0.7,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming wage growth announcement."
+  },
+  {
+    "date": "2023-01-04",
+    "price": 15027,
+    "arm": 1.12,
+    "srm": 0.73,
+    "factor_array": [
+      -0.34,
+      0.2,
+      0.06,
+      -0.79,
+      0.12
+    ],
+    "pct_change": -0.47,
+    "text_summary": "Consolidation continued with BTC range-bound between 15K and 18K. Open interest remained flat."
+  },
+  {
+    "date": "2023-01-05",
+    "price": 15386,
+    "arm": 0.59,
+    "srm": 0.31,
+    "factor_array": [
+      0.73,
+      0.67,
+      0.11,
+      0.43,
+      -0.25
+    ],
+    "pct_change": 2.39,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2023-01-06",
+    "price": 15192,
+    "arm": 1.71,
+    "srm": 0.54,
+    "factor_array": [
+      -0.09,
+      0.67,
+      -0.35,
+      -0.54,
+      0.1
+    ],
+    "pct_change": -1.26,
+    "text_summary": "Market crashed as Singapore announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-01-07",
+    "price": 14805,
+    "arm": 1.19,
+    "srm": 0.86,
+    "factor_array": [
+      -0.54,
+      0.93,
+      -0.04,
+      -0.58,
+      0.11
+    ],
+    "pct_change": -2.55,
+    "text_summary": "Selling pressure intensified after Galaxy Digital reported security breach. Market cap lost $271B in 24 hours."
+  },
+  {
+    "date": "2023-01-08",
+    "price": 14839,
+    "arm": 0.99,
+    "srm": 0.67,
+    "factor_array": [
+      0.01,
+      0.43,
+      0.52,
+      0.19,
+      -0.06
+    ],
+    "pct_change": 0.23,
+    "text_summary": "Bitcoin traded sideways as markets awaited GDP growth decision. Volume declined 540% from weekly average."
+  },
+  {
+    "date": "2023-01-09",
+    "price": 14731,
+    "arm": 0.89,
+    "srm": 0.66,
+    "factor_array": [
+      -0.09,
+      0.39,
+      0.38,
+      -0.32,
+      -0.45
+    ],
+    "pct_change": -0.73,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Japan regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-10",
+    "price": 14721,
+    "arm": 1.09,
+    "srm": 0.59,
+    "factor_array": [
+      -0.21,
+      0.23,
+      0,
+      -0.14,
+      -0.29
+    ],
+    "pct_change": -0.07,
+    "text_summary": "Bitcoin traded sideways as markets awaited GDP growth decision. Volume declined 325% from weekly average."
+  },
+  {
+    "date": "2023-01-11",
+    "price": 14356,
+    "arm": 1.52,
+    "srm": 0.88,
+    "factor_array": [
+      -0.9,
+      0.75,
+      0.13,
+      -0.71,
+      0.47
+    ],
+    "pct_change": -2.48,
+    "text_summary": "BTC broke key support at 14K, triggering cascading liquidations. Over $862M in long positions wiped out."
+  },
+  {
+    "date": "2023-01-12",
+    "price": 14452,
+    "arm": 0.97,
+    "srm": 0.7,
+    "factor_array": [
+      0.44,
+      0.55,
+      0.57,
+      0.27,
+      -0.12
+    ],
+    "pct_change": 0.67,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2023-01-13",
+    "price": 14362,
+    "arm": 1.14,
+    "srm": 0.79,
+    "factor_array": [
+      -0.4,
+      0.37,
+      -0.19,
+      -0.78,
+      -0.32
+    ],
+    "pct_change": -0.62,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Singapore regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-14",
+    "price": 14361,
+    "arm": 0.97,
+    "srm": 0.52,
+    "factor_array": [
+      -0.12,
+      0.13,
+      0.33,
+      -0.71,
+      0.48
+    ],
+    "pct_change": -0.01,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Singapore regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-15",
+    "price": 14357,
+    "arm": 0.86,
+    "srm": 0.61,
+    "factor_array": [
+      -0.06,
+      0.39,
+      0.57,
+      -0.35,
+      -0.43
+    ],
+    "pct_change": -0.03,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2023-01-16",
+    "price": 14569,
+    "arm": 0.61,
+    "srm": 0.52,
+    "factor_array": [
+      0.7,
+      0.57,
+      0.42,
+      0.2,
+      0.12
+    ],
+    "pct_change": 1.48,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 218 million, signaling strong demand."
+  },
+  {
+    "date": "2023-01-17",
+    "price": 14371,
+    "arm": 1.54,
+    "srm": 0.52,
+    "factor_array": [
+      -0.38,
+      0.62,
+      -0.36,
+      -0.69,
+      -0.2
+    ],
+    "pct_change": -1.36,
+    "text_summary": "Selling pressure intensified after Morgan Stanley reported security breach. Market cap lost $183B in 24 hours."
+  },
+  {
+    "date": "2023-01-18",
+    "price": 14378,
+    "arm": 1.12,
+    "srm": 0.63,
+    "factor_array": [
+      -0.16,
+      0.37,
+      0.06,
+      0.77,
+      -0.27
+    ],
+    "pct_change": 0.05,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 873% from weekly average."
+  },
+  {
+    "date": "2023-01-19",
+    "price": 14466,
+    "arm": 0.87,
+    "srm": 0.52,
+    "factor_array": [
+      0.09,
+      0.45,
+      0.01,
+      0.3,
+      0.02
+    ],
+    "pct_change": 0.61,
+    "text_summary": "Consolidation continued with BTC range-bound between 14K and 16K. Open interest remained flat."
+  },
+  {
+    "date": "2023-01-20",
+    "price": 14540,
+    "arm": 0.93,
+    "srm": 0.55,
+    "factor_array": [
+      0.2,
+      0.26,
+      0.44,
+      0.14,
+      0.26
+    ],
+    "pct_change": 0.51,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming housing announcement."
+  },
+  {
+    "date": "2023-01-21",
+    "price": 14366,
+    "arm": 1.41,
+    "srm": 0.79,
+    "factor_array": [
+      -0.52,
+      0.4,
+      0.17,
+      -0.55,
+      -0.12
+    ],
+    "pct_change": -1.2,
+    "text_summary": "Crypto markets slumped following Morgan Stanley regulatory investigation. Trading volumes surged 127% on panic selling."
+  },
+  {
+    "date": "2023-01-22",
+    "price": 14465,
+    "arm": 1.03,
+    "srm": 0.72,
+    "factor_array": [
+      0.3,
+      0.59,
+      -0.02,
+      0.53,
+      0.36
+    ],
+    "pct_change": 0.69,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2023-01-23",
+    "price": 14040,
+    "arm": 1.58,
+    "srm": 0.88,
+    "factor_array": [
+      -0.75,
+      0.76,
+      0,
+      -0.36,
+      0.33
+    ],
+    "pct_change": -2.94,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. CPI inflation concerns weighed on sentiment."
+  },
+  {
+    "date": "2023-01-24",
+    "price": 14380,
+    "arm": 0.87,
+    "srm": 0.33,
+    "factor_array": [
+      0.57,
+      0.89,
+      0.01,
+      0.21,
+      0.37
+    ],
+    "pct_change": 2.42,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $421M."
+  },
+  {
+    "date": "2023-01-25",
+    "price": 14232,
+    "arm": 1.3,
+    "srm": 0.72,
+    "factor_array": [
+      -0.26,
+      0.34,
+      -0.17,
+      -0.46,
+      0.15
+    ],
+    "pct_change": -1.03,
+    "text_summary": "Selling pressure intensified after Deutsche Bank reported security breach. Market cap lost $796B in 24 hours."
+  },
+  {
+    "date": "2023-01-26",
+    "price": 14383,
+    "arm": 0.77,
+    "srm": 0.61,
+    "factor_array": [
+      0.25,
+      0.65,
+      0.2,
+      0.43,
+      0.37
+    ],
+    "pct_change": 1.06,
+    "text_summary": "Markets surged on positive regulatory developments in Singapore. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-01-27",
+    "price": 14180,
+    "arm": 1.3,
+    "srm": 0.7,
+    "factor_array": [
+      -0.24,
+      0.77,
+      0.1,
+      -0.36,
+      0.4
+    ],
+    "pct_change": -1.41,
+    "text_summary": "Bearish reversal as whales moved 176K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2023-01-28",
+    "price": 14510,
+    "arm": 0.88,
+    "srm": 0.33,
+    "factor_array": [
+      0.81,
+      0.85,
+      0.42,
+      0.59,
+      -0.44
+    ],
+    "pct_change": 2.33,
+    "text_summary": "Markets pushed higher following JPMorgan's $687M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2023-01-29",
+    "price": 14410,
+    "arm": 1.04,
+    "srm": 0.8,
+    "factor_array": [
+      -0.17,
+      0.35,
+      -0.39,
+      -0.6,
+      0.38
+    ],
+    "pct_change": -0.69,
+    "text_summary": "Consolidation continued with BTC range-bound between 14K and 17K. Open interest remained flat."
+  },
+  {
+    "date": "2023-01-30",
+    "price": 14499,
+    "arm": 1.15,
+    "srm": 0.63,
+    "factor_array": [
+      -0.03,
+      0.32,
+      0.13,
+      0.43,
+      0.46
+    ],
+    "pct_change": 0.62,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UAE regulatory clarity still pending."
+  },
+  {
+    "date": "2023-01-31",
+    "price": 14147,
+    "arm": 1.36,
+    "srm": 0.81,
+    "factor_array": [
+      -0.97,
+      0.91,
+      -0.32,
+      -0.78,
+      0.48
+    ],
+    "pct_change": -2.43,
+    "text_summary": "Bearish reversal as whales moved 475K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "date": "2022-02-01",
+    "price": 41720,
+    "arm": 1.39,
+    "srm": 0.54,
+    "factor_array": [
+      -0.27,
+      0.79,
+      0.17,
+      -0.72,
+      -0.09
+    ],
+    "pct_change": -1.87,
+    "text_summary": "Crypto markets slumped following Deutsche Bank regulatory investigation. Trading volumes surged 674% on panic selling."
+  },
+  {
+    "date": "2022-02-02",
+    "price": 41566,
+    "arm": 0.85,
+    "srm": 0.61,
+    "factor_array": [
+      -0.41,
+      0.51,
+      0.13,
+      -0.34,
+      -0.47
+    ],
+    "pct_change": -0.37,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-02-03",
+    "price": 41233,
+    "arm": 1.1,
+    "srm": 0.79,
+    "factor_array": [
+      -0.06,
+      0.3,
+      -0.23,
+      -0.6,
+      0.38
+    ],
+    "pct_change": -0.8,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-02-04",
+    "price": 41151,
+    "arm": 1.07,
+    "srm": 0.77,
+    "factor_array": [
+      -0.28,
+      0.44,
+      0.05,
+      -0.31,
+      -0.4
+    ],
+    "pct_change": -0.2,
+    "text_summary": "Bitcoin traded sideways as markets awaited retail sales decision. Volume declined 664% from weekly average."
+  },
+  {
+    "date": "2022-02-05",
+    "price": 40929,
+    "arm": 1.01,
+    "srm": 0.64,
+    "factor_array": [
+      -0.14,
+      0.52,
+      0.13,
+      -0.66,
+      -0.15
+    ],
+    "pct_change": -0.54,
+    "text_summary": "Bitcoin traded sideways as markets awaited employment decision. Volume declined 726% from weekly average."
+  },
+  {
+    "date": "2022-02-06",
+    "price": 41044,
+    "arm": 0.87,
+    "srm": 0.51,
+    "factor_array": [
+      0.08,
+      0.27,
+      0.11,
+      0.71,
+      0.31
+    ],
+    "pct_change": 0.28,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 784% from weekly average."
+  },
+  {
+    "date": "2022-02-07",
+    "price": 41138,
+    "arm": 0.93,
+    "srm": 0.77,
+    "factor_array": [
+      0.13,
+      0.46,
+      0.24,
+      0.11,
+      -0.3
+    ],
+    "pct_change": 0.23,
+    "text_summary": "Consolidation continued with BTC range-bound between 41K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2022-02-08",
+    "price": 41159,
+    "arm": 1.1,
+    "srm": 0.65,
+    "factor_array": [
+      0.05,
+      0.16,
+      0.09,
+      0.5,
+      -0.42
+    ],
+    "pct_change": 0.05,
+    "text_summary": "Consolidation continued with BTC range-bound between 41K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2022-02-09",
+    "price": 40221,
+    "arm": 1.44,
+    "srm": 0.82,
+    "factor_array": [
+      -0.48,
+      0.71,
+      -0.14,
+      -0.65,
+      0.36
+    ],
+    "pct_change": -2.28,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. wage growth concerns weighed on sentiment."
+  },
+  {
+    "date": "2022-02-10",
+    "price": 40112,
+    "arm": 1.05,
+    "srm": 0.68,
+    "factor_array": [
+      -0.03,
+      0.35,
+      -0.25,
+      -0.38,
+      0.39
+    ],
+    "pct_change": -0.27,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UAE regulatory clarity still pending."
+  },
+  {
+    "date": "2022-02-11",
+    "price": 40501,
+    "arm": 0.94,
+    "srm": 0.55,
+    "factor_array": [
+      0.31,
+      0.31,
+      0.45,
+      0.54,
+      -0.18
+    ],
+    "pct_change": 0.97,
+    "text_summary": "Consolidation continued with BTC range-bound between 41K and 43K. Open interest remained flat."
+  },
+  {
+    "date": "2022-02-12",
+    "price": 41210,
+    "arm": 0.68,
+    "srm": 0.78,
+    "factor_array": [
+      0.61,
+      0.72,
+      0.63,
+      0.17,
+      -0.07
+    ],
+    "pct_change": 1.75,
+    "text_summary": "Markets surged on positive regulatory developments in UAE. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2022-02-13",
+    "price": 40913,
+    "arm": 0.99,
+    "srm": 0.7,
+    "factor_array": [
+      -0.18,
+      0.63,
+      0.3,
+      -0.52,
+      -0.11
+    ],
+    "pct_change": -0.72,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2022-02-14",
+    "price": 41044,
+    "arm": 1.04,
+    "srm": 0.52,
+    "factor_array": [
+      0.09,
+      0.41,
+      -0.37,
+      0.32,
+      0.18
+    ],
+    "pct_change": 0.32,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2022-02-15",
+    "price": 40880,
+    "arm": 1.1,
+    "srm": 0.65,
+    "factor_array": [
+      0.03,
+      0.57,
+      -0.27,
+      -0.58,
+      0
+    ],
+    "pct_change": -0.4,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2022-02-16",
+    "price": 39940,
+    "arm": 1.61,
+    "srm": 0.87,
+    "factor_array": [
+      -0.7,
+      0.71,
+      0.11,
+      -0.64,
+      -0.28
+    ],
+    "pct_change": -2.3,
+    "text_summary": "Markets fell sharply as Grayscale dumped 500K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2022-02-17",
+    "price": 39165,
+    "arm": 1.14,
+    "srm": 0.75,
+    "factor_array": [
+      -0.62,
+      0.81,
+      -0.38,
+      -0.19,
+      0.37
+    ],
+    "pct_change": -1.94,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. housing concerns weighed on sentiment."
+  },
+  {
+    "date": "2022-02-18",
+    "price": 39001,
+    "arm": 1,
+    "srm": 0.75,
+    "factor_array": [
+      0.14,
+      0.41,
+      0.62,
+      -0.53,
+      -0.26
+    ],
+    "pct_change": -0.42,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2022-02-19",
+    "price": 39754,
+    "arm": 0.73,
+    "srm": 0.58,
+    "factor_array": [
+      0.3,
+      0.5,
+      0.6,
+      0.59,
+      -0.05
+    ],
+    "pct_change": 1.93,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 355 million, signaling strong demand."
+  },
+  {
+    "date": "2022-02-20",
+    "price": 39468,
+    "arm": 1.06,
+    "srm": 0.65,
+    "factor_array": [
+      -0.05,
+      0.35,
+      -0.43,
+      -0.6,
+      -0.01
+    ],
+    "pct_change": -0.72,
+    "text_summary": "Bitcoin traded sideways as markets awaited employment decision. Volume declined 815% from weekly average."
+  },
+  {
+    "date": "2022-02-21",
+    "price": 39275,
+    "arm": 1.04,
+    "srm": 0.5,
+    "factor_array": [
+      -0.02,
+      0.28,
+      -0.14,
+      -0.11,
+      -0.37
+    ],
+    "pct_change": -0.49,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-02-22",
+    "price": 39106,
+    "arm": 1.15,
+    "srm": 0.67,
+    "factor_array": [
+      -0.32,
+      0.54,
+      -0.07,
+      -0.47,
+      -0.28
+    ],
+    "pct_change": -0.43,
+    "text_summary": "Consolidation continued with BTC range-bound between 39K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2022-02-23",
+    "price": 39364,
+    "arm": 0.87,
+    "srm": 0.51,
+    "factor_array": [
+      0.11,
+      0.61,
+      0.1,
+      0.19,
+      -0.47
+    ],
+    "pct_change": 0.66,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-02-24",
+    "price": 38801,
+    "arm": 1.31,
+    "srm": 0.69,
+    "factor_array": [
+      -0.16,
+      0.54,
+      -0.44,
+      -0.34,
+      -0.41
+    ],
+    "pct_change": -1.43,
+    "text_summary": "Sharp sell-off triggered by unexpected Fed rate data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2022-02-25",
+    "price": 39410,
+    "arm": 0.62,
+    "srm": 0.56,
+    "factor_array": [
+      0.54,
+      0.46,
+      0.45,
+      0.48,
+      -0.24
+    ],
+    "pct_change": 1.57,
+    "text_summary": "Crypto markets advanced on news of Deutsche Bank integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2022-02-26",
+    "price": 39335,
+    "arm": 1.03,
+    "srm": 0.68,
+    "factor_array": [
+      -0.26,
+      0.53,
+      -0.38,
+      -0.24,
+      -0.33
+    ],
+    "pct_change": -0.19,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming employment announcement."
+  },
+  {
+    "date": "2022-02-27",
+    "price": 39445,
+    "arm": 1.11,
+    "srm": 0.67,
+    "factor_array": [
+      0.32,
+      0.3,
+      0.12,
+      0.42,
+      -0.49
+    ],
+    "pct_change": 0.28,
+    "text_summary": "Consolidation continued with BTC range-bound between 39K and 40K. Open interest remained flat."
+  },
+  {
+    "date": "2022-02-28",
+    "price": 39264,
+    "arm": 1.06,
+    "srm": 0.64,
+    "factor_array": [
+      -0.02,
+      0.57,
+      -0.47,
+      -0.75,
+      0.34
+    ],
+    "pct_change": -0.46,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  }
+]

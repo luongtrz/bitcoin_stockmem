@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2023-11-01",
+    "price": 12963,
+    "arm": 0.9,
+    "srm": 0.67,
+    "factor_array": [
+      0.15,
+      0.55,
+      0.04,
+      -0.13,
+      0.11
+    ],
+    "pct_change": -0.35,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming GDP growth announcement."
+  },
+  {
+    "date": "2023-11-02",
+    "price": 13055,
+    "arm": 1.14,
+    "srm": 0.51,
+    "factor_array": [
+      -0.01,
+      0.29,
+      0.15,
+      0.27,
+      0.2
+    ],
+    "pct_change": 0.71,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 209% from weekly average."
+  },
+  {
+    "date": "2023-11-03",
+    "price": 12773,
+    "arm": 1.11,
+    "srm": 0.98,
+    "factor_array": [
+      -0.52,
+      0.66,
+      -0.19,
+      -0.72,
+      -0.33
+    ],
+    "pct_change": -2.16,
+    "text_summary": "Selling pressure intensified after MicroStrategy reported security breach. Market cap lost $371B in 24 hours."
+  },
+  {
+    "date": "2023-11-04",
+    "price": 12777,
+    "arm": 1.12,
+    "srm": 0.66,
+    "factor_array": [
+      0.04,
+      0.47,
+      -0.29,
+      0.22,
+      0.37
+    ],
+    "pct_change": 0.03,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Singapore regulatory clarity still pending."
+  },
+  {
+    "date": "2023-11-05",
+    "price": 12732,
+    "arm": 1.01,
+    "srm": 0.74,
+    "factor_array": [
+      0.12,
+      0.18,
+      -0.09,
+      -0.22,
+      0.47
+    ],
+    "pct_change": -0.35,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Japan regulatory clarity still pending."
+  },
+  {
+    "date": "2023-11-06",
+    "price": 12863,
+    "arm": 0.51,
+    "srm": 0.75,
+    "factor_array": [
+      0.1,
+      0.5,
+      0.39,
+      0.73,
+      -0.26
+    ],
+    "pct_change": 1.03,
+    "text_summary": "Crypto markets advanced on news of Galaxy Digital integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2023-11-07",
+    "price": 12997,
+    "arm": 0.76,
+    "srm": 0.61,
+    "factor_array": [
+      0.05,
+      0.33,
+      0.31,
+      0.69,
+      0.37
+    ],
+    "pct_change": 1.04,
+    "text_summary": "Markets surged on positive regulatory developments in EU. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-11-08",
+    "price": 12688,
+    "arm": 1.71,
+    "srm": 0.9,
+    "factor_array": [
+      -1.01,
+      0.58,
+      0.17,
+      -0.31,
+      0.47
+    ],
+    "pct_change": -2.38,
+    "text_summary": "BTC broke key support at 13K, triggering cascading liquidations. Over $663M in long positions wiped out."
+  },
+  {
+    "date": "2023-11-09",
+    "price": 12722,
+    "arm": 0.96,
+    "srm": 0.52,
+    "factor_array": [
+      0.3,
+      0.37,
+      0.24,
+      0.47,
+      0.34
+    ],
+    "pct_change": 0.27,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2023-11-10",
+    "price": 12852,
+    "arm": 0.79,
+    "srm": 0.78,
+    "factor_array": [
+      0.36,
+      0.33,
+      0.45,
+      0.4,
+      -0.28
+    ],
+    "pct_change": 1.02,
+    "text_summary": "Strong buying pressure pushed BTC higher. Grayscale announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2023-11-11",
+    "price": 13096,
+    "arm": 0.62,
+    "srm": 0.67,
+    "factor_array": [
+      0.58,
+      0.49,
+      0.08,
+      0.32,
+      -0.2
+    ],
+    "pct_change": 1.9,
+    "text_summary": "Markets surged on positive regulatory developments in Japan. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-11-12",
+    "price": 13135,
+    "arm": 1.07,
+    "srm": 0.74,
+    "factor_array": [
+      0.09,
+      0.32,
+      -0.39,
+      0.38,
+      -0.29
+    ],
+    "pct_change": 0.3,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 15K. Open interest remained flat."
+  },
+  {
+    "date": "2023-11-13",
+    "price": 13400,
+    "arm": 0.77,
+    "srm": 0.3,
+    "factor_array": [
+      0.43,
+      0.67,
+      0.21,
+      0.52,
+      0.43
+    ],
+    "pct_change": 2.02,
+    "text_summary": "Markets surged on positive regulatory developments in EU. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-11-14",
+    "price": 13396,
+    "arm": 0.85,
+    "srm": 0.66,
+    "factor_array": [
+      0.13,
+      0.3,
+      0.09,
+      -0.53,
+      0.14
+    ],
+    "pct_change": -0.03,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 15K. Open interest remained flat."
+  },
+  {
+    "date": "2023-11-15",
+    "price": 13793,
+    "arm": 0.95,
+    "srm": 0.41,
+    "factor_array": [
+      0.69,
+      1.06,
+      0.5,
+      0.46,
+      0.07
+    ],
+    "pct_change": 2.96,
+    "text_summary": "Positive sentiment drove Bitcoin higher as the US approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2023-11-16",
+    "price": 13604,
+    "arm": 1.3,
+    "srm": 0.58,
+    "factor_array": [
+      -0.66,
+      0.5,
+      -0.32,
+      -0.38,
+      0.38
+    ],
+    "pct_change": -1.37,
+    "text_summary": "Market crashed as EU announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-11-17",
+    "price": 13660,
+    "arm": 1.12,
+    "srm": 0.71,
+    "factor_array": [
+      -0.09,
+      0.33,
+      -0.23,
+      0.73,
+      0.03
+    ],
+    "pct_change": 0.41,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2023-11-18",
+    "price": 13391,
+    "arm": 1.59,
+    "srm": 0.6,
+    "factor_array": [
+      -0.47,
+      0.84,
+      -0.15,
+      -0.71,
+      -0.26
+    ],
+    "pct_change": -1.97,
+    "text_summary": "Crypto markets slumped following ARK Invest regulatory investigation. Trading volumes surged 784% on panic selling."
+  },
+  {
+    "date": "2023-11-19",
+    "price": 13324,
+    "arm": 1.08,
+    "srm": 0.55,
+    "factor_array": [
+      -0.05,
+      0.54,
+      -0.03,
+      -0.71,
+      -0.32
+    ],
+    "pct_change": -0.5,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UAE regulatory clarity still pending."
+  },
+  {
+    "date": "2023-11-20",
+    "price": 13801,
+    "arm": 0.78,
+    "srm": 0.38,
+    "factor_array": [
+      1.37,
+      0.84,
+      0.27,
+      0.51,
+      -0.14
+    ],
+    "pct_change": 3.58,
+    "text_summary": "BTC surged on reports of sovereign wealth fund crypto allocation. ETF volumes hit new daily record of $193M."
+  },
+  {
+    "date": "2023-11-21",
+    "price": 13985,
+    "arm": 0.9,
+    "srm": 0.8,
+    "factor_array": [
+      0.18,
+      0.37,
+      0.09,
+      0.28,
+      0.47
+    ],
+    "pct_change": 1.33,
+    "text_summary": "Markets surged on positive regulatory developments in UAE. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-11-22",
+    "price": 13619,
+    "arm": 1.78,
+    "srm": 0.91,
+    "factor_array": [
+      -0.85,
+      0.84,
+      0.15,
+      -0.12,
+      0.15
+    ],
+    "pct_change": -2.62,
+    "text_summary": "Market crashed as UK announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-11-23",
+    "price": 13646,
+    "arm": 1.15,
+    "srm": 0.66,
+    "factor_array": [
+      -0.22,
+      0.51,
+      0.03,
+      0.7,
+      -0.4
+    ],
+    "pct_change": 0.2,
+    "text_summary": "Consolidation continued with BTC range-bound between 14K and 16K. Open interest remained flat."
+  },
+  {
+    "date": "2023-11-24",
+    "price": 13489,
+    "arm": 1.28,
+    "srm": 0.7,
+    "factor_array": [
+      -0.42,
+      0.63,
+      -0.02,
+      -0.63,
+      -0.39
+    ],
+    "pct_change": -1.15,
+    "text_summary": "Markets fell sharply as Tesla dumped 282K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2023-11-25",
+    "price": 13474,
+    "arm": 1.03,
+    "srm": 0.75,
+    "factor_array": [
+      -0.07,
+      0.16,
+      -0.24,
+      -0.33,
+      0.46
+    ],
+    "pct_change": -0.11,
+    "text_summary": "Consolidation continued with BTC range-bound between 13K and 15K. Open interest remained flat."
+  },
+  {
+    "date": "2023-11-26",
+    "price": 13299,
+    "arm": 1.43,
+    "srm": 0.6,
+    "factor_array": [
+      -0.4,
+      0.51,
+      0.06,
+      -0.53,
+      -0.1
+    ],
+    "pct_change": -1.3,
+    "text_summary": "Market crashed as the US announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2023-11-27",
+    "price": 13146,
+    "arm": 1.66,
+    "srm": 0.65,
+    "factor_array": [
+      -0.2,
+      0.56,
+      -0.35,
+      -0.43,
+      0.05
+    ],
+    "pct_change": -1.15,
+    "text_summary": "Sharp sell-off triggered by unexpected GDP growth data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2023-11-28",
+    "price": 13314,
+    "arm": 0.54,
+    "srm": 0.62,
+    "factor_array": [
+      0.55,
+      0.45,
+      0.27,
+      0.57,
+      0.11
+    ],
+    "pct_change": 1.28,
+    "text_summary": "Markets surged on positive regulatory developments in Japan. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2023-11-29",
+    "price": 13218,
+    "arm": 0.94,
+    "srm": 0.76,
+    "factor_array": [
+      -0.2,
+      0.28,
+      0.17,
+      -0.38,
+      -0.45
+    ],
+    "pct_change": -0.72,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 694% from weekly average."
+  },
+  {
+    "date": "2023-11-30",
+    "price": 13166,
+    "arm": 1.02,
+    "srm": 0.72,
+    "factor_array": [
+      0.12,
+      0.47,
+      -0.15,
+      -0.35,
+      -0.09
+    ],
+    "pct_change": -0.39,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 896% from weekly average."
+  }
+]

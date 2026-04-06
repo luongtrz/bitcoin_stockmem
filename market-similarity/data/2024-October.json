@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2024-10-01",
+    "price": 44696,
+    "arm": 1.51,
+    "srm": 0.97,
+    "factor_array": [
+      -0.79,
+      0.59,
+      -0.37,
+      -0.63,
+      -0.37
+    ],
+    "pct_change": -2.36,
+    "text_summary": "BTC broke key support at 45K, triggering cascading liquidations. Over $334M in long positions wiped out."
+  },
+  {
+    "date": "2024-10-02",
+    "price": 44535,
+    "arm": 0.92,
+    "srm": 0.62,
+    "factor_array": [
+      0.14,
+      0.26,
+      0.63,
+      -0.65,
+      -0.15
+    ],
+    "pct_change": -0.36,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UK regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-03",
+    "price": 43270,
+    "arm": 1.38,
+    "srm": 0.86,
+    "factor_array": [
+      -0.95,
+      0.82,
+      -0.1,
+      -0.75,
+      0.09
+    ],
+    "pct_change": -2.84,
+    "text_summary": "Bearish reversal as whales moved 489K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2024-10-04",
+    "price": 44135,
+    "arm": 0.68,
+    "srm": 0.52,
+    "factor_array": [
+      0.79,
+      0.68,
+      0.1,
+      0.38,
+      0.49
+    ],
+    "pct_change": 2,
+    "text_summary": "Strong buying pressure pushed BTC higher. Fidelity announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2024-10-05",
+    "price": 45697,
+    "arm": 0.91,
+    "srm": 0.49,
+    "factor_array": [
+      1.26,
+      0.89,
+      0.12,
+      0.14,
+      -0.21
+    ],
+    "pct_change": 3.54,
+    "text_summary": "Strong buying pressure pushed BTC higher. Binance announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2024-10-06",
+    "price": 45564,
+    "arm": 1.05,
+    "srm": 0.57,
+    "factor_array": [
+      -0.33,
+      0.2,
+      0.09,
+      -0.32,
+      -0.01
+    ],
+    "pct_change": -0.29,
+    "text_summary": "Consolidation continued with BTC range-bound between 46K and 47K. Open interest remained flat."
+  },
+  {
+    "date": "2024-10-07",
+    "price": 45113,
+    "arm": 1.06,
+    "srm": 0.78,
+    "factor_array": [
+      -0.48,
+      0.53,
+      0.07,
+      -0.68,
+      0.38
+    ],
+    "pct_change": -0.99,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. China regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-08",
+    "price": 45893,
+    "arm": 0.69,
+    "srm": 0.55,
+    "factor_array": [
+      0.34,
+      0.71,
+      0.28,
+      0.69,
+      0.26
+    ],
+    "pct_change": 1.73,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 885 million, signaling strong demand."
+  },
+  {
+    "date": "2024-10-09",
+    "price": 45976,
+    "arm": 0.88,
+    "srm": 0.7,
+    "factor_array": [
+      -0.15,
+      0.22,
+      0.53,
+      0.45,
+      0.3
+    ],
+    "pct_change": 0.18,
+    "text_summary": "Consolidation continued with BTC range-bound between 46K and 47K. Open interest remained flat."
+  },
+  {
+    "date": "2024-10-10",
+    "price": 45769,
+    "arm": 0.9,
+    "srm": 0.5,
+    "factor_array": [
+      0.03,
+      0.54,
+      0.39,
+      -0.4,
+      0.09
+    ],
+    "pct_change": -0.45,
+    "text_summary": "Bitcoin traded sideways as markets awaited housing decision. Volume declined 356% from weekly average."
+  },
+  {
+    "date": "2024-10-11",
+    "price": 45668,
+    "arm": 1.1,
+    "srm": 0.57,
+    "factor_array": [
+      -0.3,
+      0.41,
+      0.13,
+      -0.47,
+      0.03
+    ],
+    "pct_change": -0.22,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming wage growth announcement."
+  },
+  {
+    "date": "2024-10-12",
+    "price": 45536,
+    "arm": 1,
+    "srm": 0.61,
+    "factor_array": [
+      -0.14,
+      0.32,
+      0.63,
+      -0.37,
+      -0.44
+    ],
+    "pct_change": -0.29,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming Fed rate announcement."
+  },
+  {
+    "date": "2024-10-13",
+    "price": 46870,
+    "arm": 0.67,
+    "srm": 0.37,
+    "factor_array": [
+      0.82,
+      0.75,
+      0.21,
+      0.34,
+      -0.01
+    ],
+    "pct_change": 2.93,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 508 million, signaling strong demand."
+  },
+  {
+    "date": "2024-10-14",
+    "price": 47798,
+    "arm": 0.68,
+    "srm": 0.75,
+    "factor_array": [
+      0.53,
+      0.65,
+      0.08,
+      0.62,
+      0.33
+    ],
+    "pct_change": 1.98,
+    "text_summary": "Markets surged on positive regulatory developments in the US. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2024-10-15",
+    "price": 47827,
+    "arm": 1.06,
+    "srm": 0.64,
+    "factor_array": [
+      -0.21,
+      0.3,
+      -0.22,
+      0.34,
+      -0.5
+    ],
+    "pct_change": 0.06,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming retail sales announcement."
+  },
+  {
+    "date": "2024-10-16",
+    "price": 48224,
+    "arm": 1.03,
+    "srm": 0.52,
+    "factor_array": [
+      0.26,
+      0.51,
+      -0.34,
+      0.49,
+      -0.3
+    ],
+    "pct_change": 0.83,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2024-10-17",
+    "price": 48190,
+    "arm": 0.91,
+    "srm": 0.71,
+    "factor_array": [
+      0.18,
+      0.5,
+      0.5,
+      -0.41,
+      0.35
+    ],
+    "pct_change": -0.07,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-18",
+    "price": 47496,
+    "arm": 1.37,
+    "srm": 0.58,
+    "factor_array": [
+      -0.27,
+      0.61,
+      0.17,
+      -0.13,
+      -0.15
+    ],
+    "pct_change": -1.44,
+    "text_summary": "Market crashed as China announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2024-10-19",
+    "price": 47705,
+    "arm": 0.87,
+    "srm": 0.69,
+    "factor_array": [
+      0.21,
+      0.25,
+      0.63,
+      0.53,
+      -0.05
+    ],
+    "pct_change": 0.44,
+    "text_summary": "Bitcoin traded sideways as markets awaited Fed rate decision. Volume declined 837% from weekly average."
+  },
+  {
+    "date": "2024-10-20",
+    "price": 47805,
+    "arm": 0.98,
+    "srm": 0.58,
+    "factor_array": [
+      0.2,
+      0.22,
+      0.18,
+      0.1,
+      -0.25
+    ],
+    "pct_change": 0.21,
+    "text_summary": "Consolidation continued with BTC range-bound between 48K and 51K. Open interest remained flat."
+  },
+  {
+    "date": "2024-10-21",
+    "price": 46768,
+    "arm": 1.58,
+    "srm": 0.96,
+    "factor_array": [
+      -0.94,
+      0.6,
+      -0.06,
+      -0.13,
+      0.23
+    ],
+    "pct_change": -2.17,
+    "text_summary": "Bearish reversal as whales moved 447K BTC to exchanges. Funding rates turned deeply negative across platforms."
+  },
+  {
+    "date": "2024-10-22",
+    "price": 45646,
+    "arm": 1.37,
+    "srm": 0.97,
+    "factor_array": [
+      -0.82,
+      0.63,
+      -0.35,
+      -0.6,
+      0.34
+    ],
+    "pct_change": -2.4,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. retail sales concerns weighed on sentiment."
+  },
+  {
+    "date": "2024-10-23",
+    "price": 46769,
+    "arm": 0.93,
+    "srm": 0.54,
+    "factor_array": [
+      0.77,
+      0.98,
+      0.3,
+      0.69,
+      -0.13
+    ],
+    "pct_change": 2.46,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 597 million, signaling strong demand."
+  },
+  {
+    "date": "2024-10-24",
+    "price": 45885,
+    "arm": 1.55,
+    "srm": 0.67,
+    "factor_array": [
+      -0.34,
+      0.58,
+      -0.03,
+      -0.12,
+      -0.19
+    ],
+    "pct_change": -1.89,
+    "text_summary": "Markets fell sharply as Morgan Stanley dumped 134K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2024-10-25",
+    "price": 45279,
+    "arm": 1.22,
+    "srm": 0.73,
+    "factor_array": [
+      -0.4,
+      0.62,
+      0.11,
+      -0.25,
+      0.21
+    ],
+    "pct_change": -1.32,
+    "text_summary": "BTC broke key support at 45K, triggering cascading liquidations. Over $766M in long positions wiped out."
+  },
+  {
+    "date": "2024-10-26",
+    "price": 45967,
+    "arm": 0.54,
+    "srm": 0.71,
+    "factor_array": [
+      0.2,
+      0.53,
+      0.07,
+      0.48,
+      -0.37
+    ],
+    "pct_change": 1.52,
+    "text_summary": "Positive sentiment drove Bitcoin higher as Hong Kong approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2024-10-27",
+    "price": 46183,
+    "arm": 1.09,
+    "srm": 0.64,
+    "factor_array": [
+      0.22,
+      0.21,
+      -0.17,
+      0.23,
+      0.09
+    ],
+    "pct_change": 0.47,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-28",
+    "price": 45971,
+    "arm": 0.96,
+    "srm": 0.68,
+    "factor_array": [
+      0.15,
+      0.29,
+      0.13,
+      -0.74,
+      0.07
+    ],
+    "pct_change": -0.46,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. UAE regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-29",
+    "price": 45764,
+    "arm": 0.89,
+    "srm": 0.78,
+    "factor_array": [
+      0.08,
+      0.19,
+      0.46,
+      -0.74,
+      -0.32
+    ],
+    "pct_change": -0.45,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. Japan regulatory clarity still pending."
+  },
+  {
+    "date": "2024-10-30",
+    "price": 45453,
+    "arm": 0.97,
+    "srm": 0.64,
+    "factor_array": [
+      -0.27,
+      0.45,
+      0.16,
+      -0.76,
+      0.19
+    ],
+    "pct_change": -0.68,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2024-10-31",
+    "price": 45171,
+    "arm": 1.06,
+    "srm": 0.61,
+    "factor_array": [
+      0.06,
+      0.61,
+      -0.4,
+      -0.13,
+      0.13
+    ],
+    "pct_change": -0.62,
+    "text_summary": "Bitcoin traded sideways as markets awaited PMI decision. Volume declined 496% from weekly average."
+  }
+]

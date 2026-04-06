@@ -1,0 +1,467 @@
+[
+  {
+    "date": "2025-08-01",
+    "price": 45793,
+    "arm": 1.01,
+    "srm": 0.73,
+    "factor_array": [
+      0,
+      0.45,
+      -0.32,
+      0.76,
+      -0.46
+    ],
+    "pct_change": 0.62,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 815% from weekly average."
+  },
+  {
+    "date": "2025-08-02",
+    "price": 45646,
+    "arm": 1.1,
+    "srm": 0.63,
+    "factor_array": [
+      -0.12,
+      0.53,
+      -0.11,
+      -0.49,
+      0.02
+    ],
+    "pct_change": -0.32,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 290% from weekly average."
+  },
+  {
+    "date": "2025-08-03",
+    "price": 45724,
+    "arm": 0.87,
+    "srm": 0.73,
+    "factor_array": [
+      -0.17,
+      0.4,
+      0.54,
+      0.63,
+      0.41
+    ],
+    "pct_change": 0.17,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-08-04",
+    "price": 45916,
+    "arm": 1.09,
+    "srm": 0.75,
+    "factor_array": [
+      -0.04,
+      0.28,
+      0.01,
+      0.14,
+      -0.12
+    ],
+    "pct_change": 0.42,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-08-05",
+    "price": 45705,
+    "arm": 0.96,
+    "srm": 0.63,
+    "factor_array": [
+      -0.26,
+      0.57,
+      0.09,
+      -0.54,
+      -0.01
+    ],
+    "pct_change": -0.46,
+    "text_summary": "Bitcoin traded sideways as markets awaited GDP growth decision. Volume declined 453% from weekly average."
+  },
+  {
+    "date": "2025-08-06",
+    "price": 45737,
+    "arm": 1.06,
+    "srm": 0.8,
+    "factor_array": [
+      -0.18,
+      0.13,
+      -0.03,
+      0.65,
+      -0.48
+    ],
+    "pct_change": 0.07,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 384% from weekly average."
+  },
+  {
+    "date": "2025-08-07",
+    "price": 46478,
+    "arm": 0.9,
+    "srm": 0.75,
+    "factor_array": [
+      0.66,
+      0.6,
+      0.67,
+      0.19,
+      -0.05
+    ],
+    "pct_change": 1.62,
+    "text_summary": "Markets surged on positive regulatory developments in EU. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2025-08-08",
+    "price": 46603,
+    "arm": 0.96,
+    "srm": 0.64,
+    "factor_array": [
+      0.02,
+      0.49,
+      0.69,
+      0.64,
+      0.45
+    ],
+    "pct_change": 0.27,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. EU regulatory clarity still pending."
+  },
+  {
+    "date": "2025-08-09",
+    "price": 47036,
+    "arm": 1.15,
+    "srm": 0.51,
+    "factor_array": [
+      0.43,
+      0.59,
+      -0.41,
+      0.17,
+      -0.42
+    ],
+    "pct_change": 0.93,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-08-10",
+    "price": 47205,
+    "arm": 1.14,
+    "srm": 0.55,
+    "factor_array": [
+      0.25,
+      0.46,
+      -0.29,
+      0.46,
+      -0.3
+    ],
+    "pct_change": 0.36,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming housing announcement."
+  },
+  {
+    "date": "2025-08-11",
+    "price": 46270,
+    "arm": 1.45,
+    "srm": 0.51,
+    "factor_array": [
+      -0.3,
+      0.72,
+      -0.43,
+      -0.49,
+      0.3
+    ],
+    "pct_change": -1.98,
+    "text_summary": "BTC broke key support at 46K, triggering cascading liquidations. Over $724M in long positions wiped out."
+  },
+  {
+    "date": "2025-08-12",
+    "price": 46876,
+    "arm": 0.59,
+    "srm": 0.73,
+    "factor_array": [
+      0.25,
+      0.51,
+      0.38,
+      0.69,
+      -0.22
+    ],
+    "pct_change": 1.31,
+    "text_summary": "Positive sentiment drove Bitcoin higher as Japan approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2025-08-13",
+    "price": 47443,
+    "arm": 0.87,
+    "srm": 0.71,
+    "factor_array": [
+      0.53,
+      0.49,
+      0.4,
+      0.3,
+      0.09
+    ],
+    "pct_change": 1.21,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2025-08-14",
+    "price": 47671,
+    "arm": 1.07,
+    "srm": 0.66,
+    "factor_array": [
+      0.2,
+      0.32,
+      -0.49,
+      0.63,
+      0.2
+    ],
+    "pct_change": 0.48,
+    "text_summary": "Bitcoin traded sideways as markets awaited CPI inflation decision. Volume declined 636% from weekly average."
+  },
+  {
+    "date": "2025-08-15",
+    "price": 48448,
+    "arm": 0.5,
+    "srm": 0.69,
+    "factor_array": [
+      0.6,
+      0.78,
+      0.24,
+      0.6,
+      0.07
+    ],
+    "pct_change": 1.63,
+    "text_summary": "Strong buying pressure pushed BTC higher. Morgan Stanley announced major crypto adoption, boosting market confidence."
+  },
+  {
+    "date": "2025-08-16",
+    "price": 48123,
+    "arm": 1.07,
+    "srm": 0.69,
+    "factor_array": [
+      -0.17,
+      0.34,
+      0.08,
+      -0.74,
+      -0.32
+    ],
+    "pct_change": -0.67,
+    "text_summary": "Bitcoin traded sideways as markets awaited wage growth decision. Volume declined 853% from weekly average."
+  },
+  {
+    "date": "2025-08-17",
+    "price": 48864,
+    "arm": 0.6,
+    "srm": 0.64,
+    "factor_array": [
+      0.47,
+      0.73,
+      0.6,
+      0.22,
+      0.34
+    ],
+    "pct_change": 1.54,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2025-08-18",
+    "price": 48253,
+    "arm": 1.23,
+    "srm": 0.72,
+    "factor_array": [
+      -0.62,
+      0.74,
+      0.11,
+      -0.46,
+      0.3
+    ],
+    "pct_change": -1.25,
+    "text_summary": "BTC broke key support at 48K, triggering cascading liquidations. Over $257M in long positions wiped out."
+  },
+  {
+    "date": "2025-08-19",
+    "price": 47785,
+    "arm": 0.99,
+    "srm": 0.54,
+    "factor_array": [
+      -0.08,
+      0.46,
+      0.33,
+      -0.79,
+      -0.43
+    ],
+    "pct_change": -0.97,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2025-08-20",
+    "price": 46500,
+    "arm": 1.35,
+    "srm": 0.87,
+    "factor_array": [
+      -0.62,
+      0.85,
+      -0.5,
+      -0.52,
+      0.33
+    ],
+    "pct_change": -2.69,
+    "text_summary": "Crypto markets slumped following Galaxy Digital regulatory investigation. Trading volumes surged 294% on panic selling."
+  },
+  {
+    "date": "2025-08-21",
+    "price": 46170,
+    "arm": 1.08,
+    "srm": 0.76,
+    "factor_array": [
+      0.02,
+      0.25,
+      0.05,
+      -0.7,
+      -0.46
+    ],
+    "pct_change": -0.71,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. the US regulatory clarity still pending."
+  },
+  {
+    "date": "2025-08-22",
+    "price": 46678,
+    "arm": 0.61,
+    "srm": 0.67,
+    "factor_array": [
+      0.38,
+      0.47,
+      0.6,
+      0.4,
+      0.45
+    ],
+    "pct_change": 1.1,
+    "text_summary": "Markets pushed higher following JPMorgan's $438M Bitcoin purchase. Short sellers liquidated as price broke resistance."
+  },
+  {
+    "date": "2025-08-23",
+    "price": 46855,
+    "arm": 1.11,
+    "srm": 0.61,
+    "factor_array": [
+      0.4,
+      0.36,
+      -0.4,
+      0.35,
+      0.08
+    ],
+    "pct_change": 0.38,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. India regulatory clarity still pending."
+  },
+  {
+    "date": "2025-08-24",
+    "price": 46583,
+    "arm": 0.98,
+    "srm": 0.74,
+    "factor_array": [
+      -0.44,
+      0.28,
+      0.26,
+      -0.15,
+      0.15
+    ],
+    "pct_change": -0.58,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. China regulatory clarity still pending."
+  },
+  {
+    "date": "2025-08-25",
+    "price": 45064,
+    "arm": 1.53,
+    "srm": 0.92,
+    "factor_array": [
+      -1.27,
+      1.13,
+      -0.31,
+      -0.63,
+      0.34
+    ],
+    "pct_change": -3.26,
+    "text_summary": "Markets fell sharply as Tesla dumped 302K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2025-08-26",
+    "price": 44717,
+    "arm": 1.13,
+    "srm": 0.53,
+    "factor_array": [
+      0.03,
+      0.62,
+      -0.21,
+      -0.54,
+      0.2
+    ],
+    "pct_change": -0.77,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. India regulatory clarity still pending."
+  },
+  {
+    "date": "2025-08-27",
+    "price": 45160,
+    "arm": 1.02,
+    "srm": 0.71,
+    "factor_array": [
+      0.6,
+      0.6,
+      -0.25,
+      0.25,
+      -0.4
+    ],
+    "pct_change": 0.99,
+    "text_summary": "Bitcoin traded sideways as markets awaited housing decision. Volume declined 407% from weekly average."
+  },
+  {
+    "date": "2025-08-28",
+    "price": 44406,
+    "arm": 1.18,
+    "srm": 0.55,
+    "factor_array": [
+      -0.47,
+      0.47,
+      0.03,
+      -0.34,
+      -0.18
+    ],
+    "pct_change": -1.67,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. housing concerns weighed on sentiment."
+  },
+  {
+    "date": "2025-08-29",
+    "price": 44979,
+    "arm": 0.62,
+    "srm": 0.64,
+    "factor_array": [
+      0.6,
+      0.6,
+      0.03,
+      0.77,
+      -0.23
+    ],
+    "pct_change": 1.29,
+    "text_summary": "Positive sentiment drove Bitcoin higher as South Korea approved new crypto-friendly legislation. Mining hashrate reached all-time high."
+  },
+  {
+    "date": "2025-08-30",
+    "price": 45550,
+    "arm": 0.94,
+    "srm": 0.76,
+    "factor_array": [
+      0.1,
+      0.71,
+      0.33,
+      0.34,
+      -0.14
+    ],
+    "pct_change": 1.27,
+    "text_summary": "Bitcoin gained as macro conditions improved. DXY weakened and treasury yields fell, supporting risk assets."
+  },
+  {
+    "date": "2025-08-31",
+    "price": 45400,
+    "arm": 0.9,
+    "srm": 0.53,
+    "factor_array": [
+      0.05,
+      0.3,
+      0.5,
+      -0.63,
+      -0.32
+    ],
+    "pct_change": -0.33,
+    "text_summary": "Consolidation continued with BTC range-bound between 45K and 47K. Open interest remained flat."
+  }
+]

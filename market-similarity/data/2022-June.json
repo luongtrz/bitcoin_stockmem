@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2022-06-01",
+    "price": 39248,
+    "arm": 0.99,
+    "srm": 0.53,
+    "factor_array": [
+      0.27,
+      0.38,
+      0.66,
+      0.43,
+      -0.23
+    ],
+    "pct_change": 0.83,
+    "text_summary": "Bitcoin traded sideways as markets awaited Fed rate decision. Volume declined 153% from weekly average."
+  },
+  {
+    "date": "2022-06-02",
+    "price": 39617,
+    "arm": 1.03,
+    "srm": 0.68,
+    "factor_array": [
+      0.25,
+      0.47,
+      -0.21,
+      0.44,
+      0.16
+    ],
+    "pct_change": 0.94,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2022-06-03",
+    "price": 39153,
+    "arm": 1.65,
+    "srm": 0.68,
+    "factor_array": [
+      -0.59,
+      0.46,
+      -0.27,
+      -0.4,
+      -0.16
+    ],
+    "pct_change": -1.17,
+    "text_summary": "Sharp sell-off triggered by unexpected wage growth data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2022-06-04",
+    "price": 39494,
+    "arm": 1.15,
+    "srm": 0.72,
+    "factor_array": [
+      0.02,
+      0.37,
+      0.05,
+      0.11,
+      -0.22
+    ],
+    "pct_change": 0.87,
+    "text_summary": "Consolidation continued with BTC range-bound between 39K and 40K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-05",
+    "price": 39648,
+    "arm": 0.96,
+    "srm": 0.7,
+    "factor_array": [
+      0,
+      0.37,
+      0.52,
+      0.37,
+      0.21
+    ],
+    "pct_change": 0.39,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 43K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-06",
+    "price": 39406,
+    "arm": 0.87,
+    "srm": 0.72,
+    "factor_array": [
+      -0.11,
+      0.34,
+      0.62,
+      -0.25,
+      -0.34
+    ],
+    "pct_change": -0.61,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming CPI inflation announcement."
+  },
+  {
+    "date": "2022-06-07",
+    "price": 39745,
+    "arm": 0.9,
+    "srm": 0.77,
+    "factor_array": [
+      0.2,
+      0.64,
+      0.17,
+      0.35,
+      -0.21
+    ],
+    "pct_change": 0.86,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 41K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-08",
+    "price": 39824,
+    "arm": 0.96,
+    "srm": 0.61,
+    "factor_array": [
+      -0.03,
+      0.22,
+      0.38,
+      0.6,
+      0.5
+    ],
+    "pct_change": 0.2,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-06-09",
+    "price": 40425,
+    "arm": 0.69,
+    "srm": 0.65,
+    "factor_array": [
+      0.56,
+      0.47,
+      0.55,
+      0.25,
+      0.01
+    ],
+    "pct_change": 1.51,
+    "text_summary": "Bitcoin rallied as institutional investors increased exposure. ETF inflows hit 203 million, signaling strong demand."
+  },
+  {
+    "date": "2022-06-10",
+    "price": 40841,
+    "arm": 0.95,
+    "srm": 0.69,
+    "factor_array": [
+      0.4,
+      0.55,
+      0.09,
+      0.24,
+      -0.28
+    ],
+    "pct_change": 1.03,
+    "text_summary": "Markets surged on positive regulatory developments in Singapore. Whale accumulation detected on-chain with large transfers to cold wallets."
+  },
+  {
+    "date": "2022-06-11",
+    "price": 39697,
+    "arm": 1.19,
+    "srm": 0.83,
+    "factor_array": [
+      -1.05,
+      0.99,
+      -0.49,
+      -0.73,
+      0.26
+    ],
+    "pct_change": -2.8,
+    "text_summary": "Market crashed as India announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2022-06-12",
+    "price": 39725,
+    "arm": 0.92,
+    "srm": 0.7,
+    "factor_array": [
+      0.13,
+      0.18,
+      0.47,
+      0.54,
+      0.15
+    ],
+    "pct_change": 0.07,
+    "text_summary": "Consolidation continued with BTC range-bound between 40K and 42K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-13",
+    "price": 38891,
+    "arm": 1.76,
+    "srm": 0.9,
+    "factor_array": [
+      -0.74,
+      0.62,
+      -0.16,
+      -0.74,
+      -0.08
+    ],
+    "pct_change": -2.1,
+    "text_summary": "Markets fell sharply as Tesla dumped 287K BTC on exchanges. Fear and greed index dropped to extreme fear territory."
+  },
+  {
+    "date": "2022-06-14",
+    "price": 38685,
+    "arm": 1.11,
+    "srm": 0.56,
+    "factor_array": [
+      0.04,
+      0.26,
+      -0.22,
+      -0.11,
+      0.39
+    ],
+    "pct_change": -0.53,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming PMI announcement."
+  },
+  {
+    "date": "2022-06-15",
+    "price": 37981,
+    "arm": 1.51,
+    "srm": 0.63,
+    "factor_array": [
+      -0.56,
+      0.54,
+      -0.31,
+      -0.56,
+      0.19
+    ],
+    "pct_change": -1.82,
+    "text_summary": "Market crashed as South Korea announced stricter crypto regulations. Stablecoin reserves on exchanges hit record highs."
+  },
+  {
+    "date": "2022-06-16",
+    "price": 37795,
+    "arm": 1.02,
+    "srm": 0.7,
+    "factor_array": [
+      -0.36,
+      0.29,
+      -0.18,
+      -0.33,
+      0.1
+    ],
+    "pct_change": -0.49,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-06-17",
+    "price": 37678,
+    "arm": 0.87,
+    "srm": 0.51,
+    "factor_array": [
+      -0.13,
+      0.17,
+      0.68,
+      -0.68,
+      0.34
+    ],
+    "pct_change": -0.31,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming retail sales announcement."
+  },
+  {
+    "date": "2022-06-18",
+    "price": 36879,
+    "arm": 1.47,
+    "srm": 1,
+    "factor_array": [
+      -0.88,
+      0.54,
+      -0.1,
+      -0.28,
+      -0.32
+    ],
+    "pct_change": -2.12,
+    "text_summary": "Bitcoin fell as stronger dollar and rising yields pressured risk assets. GDP growth concerns weighed on sentiment."
+  },
+  {
+    "date": "2022-06-19",
+    "price": 36931,
+    "arm": 1.13,
+    "srm": 0.67,
+    "factor_array": [
+      0.34,
+      0.19,
+      -0.06,
+      0.29,
+      0.15
+    ],
+    "pct_change": 0.14,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. South Korea regulatory clarity still pending."
+  },
+  {
+    "date": "2022-06-20",
+    "price": 37238,
+    "arm": 0.96,
+    "srm": 0.6,
+    "factor_array": [
+      0.54,
+      0.39,
+      0.38,
+      0.26,
+      0.45
+    ],
+    "pct_change": 0.83,
+    "text_summary": "Quiet session for Bitcoin with minimal volatility. Traders positioned ahead of upcoming GDP growth announcement."
+  },
+  {
+    "date": "2022-06-21",
+    "price": 37298,
+    "arm": 1.01,
+    "srm": 0.55,
+    "factor_array": [
+      -0.02,
+      0.27,
+      -0.23,
+      0.22,
+      0.17
+    ],
+    "pct_change": 0.16,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-06-22",
+    "price": 37533,
+    "arm": 1.05,
+    "srm": 0.6,
+    "factor_array": [
+      0.38,
+      0.41,
+      -0.09,
+      0.49,
+      0.11
+    ],
+    "pct_change": 0.63,
+    "text_summary": "Consolidation continued with BTC range-bound between 38K and 40K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-23",
+    "price": 37920,
+    "arm": 0.76,
+    "srm": 0.6,
+    "factor_array": [
+      0.5,
+      0.37,
+      0.5,
+      0.57,
+      -0.36
+    ],
+    "pct_change": 1.03,
+    "text_summary": "Crypto markets advanced on news of Deutsche Bank integrating Bitcoin payments. On-chain metrics showed healthy accumulation patterns."
+  },
+  {
+    "date": "2022-06-24",
+    "price": 37765,
+    "arm": 0.92,
+    "srm": 0.76,
+    "factor_array": [
+      0.12,
+      0.27,
+      0.36,
+      -0.57,
+      0.14
+    ],
+    "pct_change": -0.41,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-06-25",
+    "price": 36870,
+    "arm": 1.45,
+    "srm": 0.84,
+    "factor_array": [
+      -0.7,
+      0.62,
+      -0.45,
+      -0.33,
+      0.33
+    ],
+    "pct_change": -2.37,
+    "text_summary": "Sharp sell-off triggered by unexpected GDP growth data. Risk-off sentiment spread across all crypto assets."
+  },
+  {
+    "date": "2022-06-26",
+    "price": 36951,
+    "arm": 0.97,
+    "srm": 0.71,
+    "factor_array": [
+      0.35,
+      0.26,
+      0.2,
+      0.21,
+      0.11
+    ],
+    "pct_change": 0.22,
+    "text_summary": "Markets held steady as macro conditions provided no clear direction. Funding rates normalized near zero."
+  },
+  {
+    "date": "2022-06-27",
+    "price": 36859,
+    "arm": 1.01,
+    "srm": 0.55,
+    "factor_array": [
+      -0.17,
+      0.42,
+      -0.01,
+      -0.23,
+      0.27
+    ],
+    "pct_change": -0.25,
+    "text_summary": "Consolidation continued with BTC range-bound between 37K and 38K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-28",
+    "price": 36907,
+    "arm": 1.11,
+    "srm": 0.59,
+    "factor_array": [
+      0.18,
+      0.47,
+      0.14,
+      0.45,
+      -0.27
+    ],
+    "pct_change": 0.13,
+    "text_summary": "Consolidation continued with BTC range-bound between 37K and 40K. Open interest remained flat."
+  },
+  {
+    "date": "2022-06-29",
+    "price": 36829,
+    "arm": 0.96,
+    "srm": 0.63,
+    "factor_array": [
+      -0.03,
+      0.35,
+      0.13,
+      -0.59,
+      0.36
+    ],
+    "pct_change": -0.21,
+    "text_summary": "Bitcoin traded sideways as markets awaited GDP growth decision. Volume declined 635% from weekly average."
+  },
+  {
+    "date": "2022-06-30",
+    "price": 36553,
+    "arm": 0.93,
+    "srm": 0.62,
+    "factor_array": [
+      -0.01,
+      0.31,
+      0.31,
+      -0.35,
+      -0.23
+    ],
+    "pct_change": -0.75,
+    "text_summary": "Mixed signals as on-chain data showed accumulation but exchange volumes dropped. EU regulatory clarity still pending."
+  }
+]
