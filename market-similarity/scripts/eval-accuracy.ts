@@ -1,32 +1,9 @@
-/**
- * Evaluate search accuracy.
- *
- * For each market day, run a similarity search and check whether
- * the top-K results share the same sentiment category:
- *   bullish  (pct_change > 1)
- *   bearish  (pct_change < -1)
- *   neutral  (-1 <= pct_change <= 1)
- *
- * Reports: category-match accuracy, avg pct_change delta, rank-weighted scores.
- */
-
 import "dotenv/config";
-import {
-  getDb,
-  closeDb,
-  getAllMarketDays,
-  getAllMarketDayVectors,
-  getMarketDayById,
-} from "../src/storage/database.ts";
-import { reindexAll } from "../src/vectorizer.ts";
-import {
-  buildHybridVector,
-  loadNormStats,
-} from "../src/vectorizer.ts";
-import { bufferToEmbedding, shutdown } from "../src/embeddings/embed.ts";
-import { topKSimilar } from "../src/search.ts";
-import { W_NUM, W_TEXT } from "../src/config.ts";
-import type { MarketDayInput } from "../src/types.ts";
+import { getDb, closeDb, getAllRecords } from "../src/storage/database.ts";
+import { vectorize, computeNormStats } from "../src/vectorize.ts";
+import { searchTopK, searchTopKWindows } from "../src/search.ts";
+import { WINDOW_SIZE } from "../src/config.ts";
+import type { DailyJsonInput } from "../src/types.ts";
 
 function category(pct: number): string {
   if (pct > 1) return "bullish";
@@ -34,113 +11,72 @@ function category(pct: number): string {
   return "neutral";
 }
 
-async function main() {
+function main(): void {
   getDb();
-
-  // Reindex with TS embeddings
-  console.log("Reindexing all vectors with TS embeddings...");
-  const reindexed = await reindexAll(W_NUM, W_TEXT);
-  console.log(`Reindexed ${reindexed} records\n`);
-
-  const rows = getAllMarketDays();
-  const stats = loadNormStats();
+  const records = getAllRecords();
   const K = 5;
+  if (records.length === 0) { console.log("No records."); closeDb(); return; }
 
-  // Pre-load all vectors
-  const allVecs = getAllMarketDayVectors();
-  const vecMap = new Map(allVecs.map((v) => [v.id, bufferToEmbedding(v.hybrid_vector)]));
-  const corpus = allVecs.map((v) => bufferToEmbedding(v.hybrid_vector));
-  const corpusIds = allVecs.map((v) => v.id);
+  const allDays: DailyJsonInput[] = records.map((r) => JSON.parse(r.json_data));
+  const stats = computeNormStats(allDays);
 
-  let totalQueries = 0;
-  let categoryMatches = 0;      // top-1 category match
-  let categoryMatchesTopK = 0;  // majority of top-K match
-  let pctDeltas: number[] = [];
-  let armDeltas: number[] = [];
-  let selfFound = 0;
+  let total = 0, catMatch1 = 0, catMatchK = 0, selfFound = 0;
+  const scores: number[] = [];
+  const pctDeltas: number[] = [];
 
-  // Sample every 3rd day to keep runtime reasonable
-  const sampleIndices: number[] = [];
-  for (let i = 0; i < rows.length; i += 3) sampleIndices.push(i);
+  for (let i = 0; i < allDays.length; i += 3) {
+    const query = allDays[i];
+    const queryVec = vectorize(query, stats);
+    const results = searchTopK(queryVec, records, K + 1);
+    const filtered = results.filter((r) => r.record.date !== query.date).slice(0, K);
+    if (filtered.length === 0) continue;
+    total++;
 
-  console.log(`Testing ${sampleIndices.length} queries (every 3rd day, K=${K})...\n`);
+    const queryCat = category(query.price_change_pct);
+    if (results[0].record.date === query.date) selfFound++;
+    if (category(filtered[0].record.price_change_pct) === queryCat) catMatch1++;
 
-  for (const idx of sampleIndices) {
-    const row = rows[idx];
-    const factors: number[] =
-      typeof row.factor_array === "string"
-        ? JSON.parse(row.factor_array)
-        : row.factor_array;
-
-    const input: MarketDayInput = {
-      date: row.date,
-      price: row.price,
-      arm: row.arm,
-      srm: row.srm,
-      factor_array: factors,
-      pct_change: row.pct_change,
-      text_summary: row.text_summary,
-    };
-
-    const queryVec = await buildHybridVector(input, stats, W_NUM, W_TEXT);
-
-    // Search (exclude self)
-    const results = topKSimilar(queryVec, corpus, corpusIds, K + 1)
-      .filter((r) => r.id !== row.id)
-      .slice(0, K);
-
-    totalQueries++;
-    const queryCat = category(row.pct_change);
-
-    // Top-1 accuracy
-    const top1Row = getMarketDayById(results[0].id)!;
-    if (category(top1Row.pct_change) === queryCat) categoryMatches++;
-
-    // Top-K majority
     let catCount = 0;
-    for (const r of results) {
-      const rRow = getMarketDayById(r.id)!;
-      if (category(rRow.pct_change) === queryCat) catCount++;
-      pctDeltas.push(Math.abs(rRow.pct_change - row.pct_change));
-      armDeltas.push(Math.abs(rRow.arm - row.arm));
+    for (const r of filtered) {
+      if (category(r.record.price_change_pct) === queryCat) catCount++;
+      scores.push(r.score);
+      pctDeltas.push(Math.abs(r.record.price_change_pct - query.price_change_pct));
     }
-    if (catCount > K / 2) categoryMatchesTopK++;
-
-    // Self-retrieval check (should be rank 1 with score ~1.0)
-    const selfResults = topKSimilar(queryVec, corpus, corpusIds, 1);
-    if (selfResults[0]?.id === row.id) selfFound++;
+    if (catCount > K / 2) catMatchK++;
   }
 
-  // Compute stats
+  // Window search test
+  let windowScore = 0;
+  const W = WINDOW_SIZE;
+  if (allDays.length > W * 3) {
+    const mid = Math.floor(allDays.length / 2);
+    const qWindow = allDays.slice(mid, mid + W);
+    const qVecs = qWindow.map((d) => vectorize(d, stats));
+    const wResults = searchTopKWindows(qVecs, records, qWindow[0].date, 1);
+    if (wResults.length > 0) windowScore = wResults[0].score;
+  }
+
+  const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
   const avgPctDelta = pctDeltas.reduce((a, b) => a + b, 0) / pctDeltas.length;
-  const avgArmDelta = armDeltas.reduce((a, b) => a + b, 0) / armDeltas.length;
-
-  // Category distribution
   const catDist = { bullish: 0, bearish: 0, neutral: 0 };
-  for (const row of rows) catDist[category(row.pct_change) as keyof typeof catDist]++;
+  for (const d of allDays) catDist[category(d.price_change_pct) as keyof typeof catDist]++;
 
   console.log("═══════════════════════════════════════════");
-  console.log("           EVALUATION RESULTS");
+  console.log("  EVAL (StockMem + History Rhymes Hybrid)");
   console.log("═══════════════════════════════════════════");
-  console.log(`Dataset:              ${rows.length} days`);
-  console.log(`Queries tested:       ${totalQueries}`);
-  console.log(`Category distribution: bullish=${catDist.bullish} bearish=${catDist.bearish} neutral=${catDist.neutral}`);
-  console.log(`Random baseline:      ${Math.round(Math.max(catDist.bullish, catDist.bearish, catDist.neutral) / rows.length * 100)}% (majority class)`);
+  console.log(`Dataset:              ${records.length} days`);
+  console.log(`Queries tested:       ${total}`);
+  console.log(`Category dist:        bull=${catDist.bullish} bear=${catDist.bearish} neutral=${catDist.neutral}`);
   console.log("───────────────────────────────────────────");
-  console.log(`Self-retrieval:       ${selfFound}/${totalQueries} (${(selfFound / totalQueries * 100).toFixed(1)}%)`);
-  console.log(`Top-1 category match: ${categoryMatches}/${totalQueries} (${(categoryMatches / totalQueries * 100).toFixed(1)}%)`);
-  console.log(`Top-K majority match: ${categoryMatchesTopK}/${totalQueries} (${(categoryMatchesTopK / totalQueries * 100).toFixed(1)}%)`);
+  console.log(`Self-retrieval:       ${selfFound}/${total} (${(selfFound / total * 100).toFixed(1)}%)`);
+  console.log(`Top-1 category match: ${catMatch1}/${total} (${(catMatch1 / total * 100).toFixed(1)}%)`);
+  console.log(`Top-K majority match: ${catMatchK}/${total} (${(catMatchK / total * 100).toFixed(1)}%)`);
+  console.log(`Avg similarity score: ${avgScore.toFixed(4)}`);
   console.log(`Avg |Δpct_change|:    ${avgPctDelta.toFixed(3)}%`);
-  console.log(`Avg |ΔARM|:           ${avgArmDelta.toFixed(3)}`);
+  console.log(`Window search top-1:  ${windowScore.toFixed(4)} (W=${W})`);
   console.log("═══════════════════════════════════════════");
 
-  shutdown();
   closeDb();
 }
 
-main().catch((err) => {
-  console.error("Error:", err);
-  shutdown();
-  closeDb();
-  process.exit(1);
-});
+main();

@@ -7,9 +7,11 @@ export const PROJECT_ROOT = path.resolve(__dirname, "..");
 export const DB_PATH =
   process.env.DB_PATH || path.join(PROJECT_ROOT, "data", "market.db");
 
-// Hybrid vector weights
-export const W_NUM = 1.0;
-export const W_TEXT = 1.0;
+/** α: trong so numerical indicators trong joint vector (History Rhymes: 0.5) */
+export const ALPHA = 0.5;
 
-// Default top-K for similarity search
+/** W: kich thuoc window cho SeqSim (paper: 5) */
+export const WINDOW_SIZE = 5;
+
+/** Default top-K */
 export const TOP_K = 5;

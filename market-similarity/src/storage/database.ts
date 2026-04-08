@@ -1,118 +1,60 @@
 import Database from "better-sqlite3";
 import fs from "fs";
 import path from "path";
+import type { StoredRecord, DailyJsonInput } from "../types.js";
+import { vectorize, computeNormStats } from "../vectorize.js";
 import { DB_PATH } from "../config.js";
 import { SCHEMA_SQL } from "./schemas.js";
 
 let db: Database.Database | null = null;
 
-export function getDb(dbPath?: string): Database.Database {
+export function getDb(): Database.Database {
   if (db) return db;
-  const p = dbPath || DB_PATH;
-  fs.mkdirSync(path.dirname(p), { recursive: true });
-  db = new Database(p);
+  fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
+  db = new Database(DB_PATH);
   db.pragma("journal_mode = WAL");
   db.exec(SCHEMA_SQL);
   return db;
 }
 
 export function closeDb(): void {
-  if (db) {
-    db.close();
-    db = null;
-  }
+  if (db) { db.close(); db = null; }
 }
 
-function now(): string {
-  return new Date().toISOString().replace("T", " ").slice(0, 19);
-}
-
-// ---------------------------------------------------------------------------
-// market_days
-// ---------------------------------------------------------------------------
-
-export interface MarketDayRow {
-  id?: number;
-  date: string;
-  price: number;
-  arm: number;
-  srm: number;
-  factor_array: number[] | string;
-  pct_change: number;
-  text_summary: string;
-  hybrid_vector?: Buffer | null;
-  num_dims: number;
-  created_at?: string;
-}
-
-export function insertMarketDay(row: MarketDayRow): number {
+export function insertRecords(inputs: DailyJsonInput[]): number[] {
   const d = getDb();
-  const info = d
-    .prepare(
-      `INSERT INTO market_days
-      (date, price, arm, srm, factor_array, pct_change, text_summary,
-       hybrid_vector, num_dims, created_at)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-    )
-    .run(
-      row.date,
-      row.price,
-      row.arm,
-      row.srm,
-      typeof row.factor_array === "string"
-        ? row.factor_array
-        : JSON.stringify(row.factor_array),
-      row.pct_change,
-      row.text_summary,
-      row.hybrid_vector ?? null,
-      row.num_dims,
-      now()
-    );
-  return info.lastInsertRowid as number;
+  const stats = computeNormStats(inputs);
+  const stmt = d.prepare(
+    `INSERT OR REPLACE INTO daily_records (date, asset, json_data, joint_vec)
+     VALUES (?, ?, ?, ?)`
+  );
+  const ids: number[] = [];
+  const tx = d.transaction(() => {
+    for (const input of inputs) {
+      const vec = vectorize(input, stats);
+      const info = stmt.run(
+        input.date, input.asset,
+        JSON.stringify(input),
+        JSON.stringify(vec)
+      );
+      ids.push(info.lastInsertRowid as number);
+    }
+  });
+  tx();
+  return ids;
 }
 
-export function getMarketDayById(id: number): MarketDayRow | null {
+export function getAllRecords(): StoredRecord[] {
   const d = getDb();
-  return (d.prepare("SELECT * FROM market_days WHERE id = ?").get(id) as MarketDayRow) ?? null;
+  return d.prepare("SELECT * FROM daily_records ORDER BY date").all() as StoredRecord[];
 }
 
-export function getMarketDayByDate(date: string): MarketDayRow | null {
+export function countRecords(): number {
   const d = getDb();
-  return (d.prepare("SELECT * FROM market_days WHERE date = ?").get(date) as MarketDayRow) ?? null;
+  return (d.prepare("SELECT COUNT(*) as cnt FROM daily_records").get() as { cnt: number }).cnt;
 }
 
-export function getAllMarketDays(): MarketDayRow[] {
+export function clearAllRecords(): void {
   const d = getDb();
-  return d.prepare("SELECT * FROM market_days ORDER BY date").all() as MarketDayRow[];
-}
-
-export function getAllMarketDayVectors(): Array<{ id: number; hybrid_vector: Buffer }> {
-  const d = getDb();
-  return d
-    .prepare("SELECT id, hybrid_vector FROM market_days WHERE hybrid_vector IS NOT NULL")
-    .all() as Array<{ id: number; hybrid_vector: Buffer }>;
-}
-
-export function updateMarketDayVector(id: number, vector: Buffer): void {
-  const d = getDb();
-  d.prepare("UPDATE market_days SET hybrid_vector = ? WHERE id = ?").run(vector, id);
-}
-
-// ---------------------------------------------------------------------------
-// market_days_meta
-// ---------------------------------------------------------------------------
-
-export function getMeta(key: string): string | null {
-  const d = getDb();
-  const row = d.prepare("SELECT value FROM market_days_meta WHERE key = ?").get(key) as
-    | { value: string }
-    | undefined;
-  return row?.value ?? null;
-}
-
-export function setMeta(key: string, value: string): void {
-  const d = getDb();
-  d.prepare(
-    "INSERT INTO market_days_meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = ?"
-  ).run(key, value, value);
+  d.prepare("DELETE FROM daily_records").run();
 }

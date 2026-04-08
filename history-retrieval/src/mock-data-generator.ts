@@ -1,191 +1,353 @@
 /**
- * Tao 10 nam du lieu mock BTC.
+ * Generate 10 years of mock BTC data with REGIME-BASED event clustering.
  *
- * - Gia BTC: random walk co trend, co bull/bear cycle (3k - 200k USD)
- * - RSI, MSI, Fear & Greed: tuong quan nhung random cao
- * - Sentiment: da dang, noise lon
- * - Factors: nhieu hon, pha tron nhieu kieu
- * - Text: da dang template hon
+ * Thay vi pick factors random, dung market regimes giong thi truong that:
+ *   - Moi regime co tap factors rieng (primary + secondary)
+ *   - Regime keo dai 2-8 tuan (persistence)
+ *   - Events cascade: trigger -> immediate -> follow-up
+ *   - Regime transitions co xac suat chuyen doi tu nhien
  */
 
 import type { DailyJsonInput } from "./types";
 
 // ----------------------------------------------------------------
-// Danh sach factors mau - MO RONG
+// Market Regimes - 8 trang thai thi truong
 // ----------------------------------------------------------------
 
-const BULLISH_FACTORS = [
-  "SEC xem xet phe duyet ETF moi",
-  "Whale tich luy manh",
-  "Chi so CPI thap hon ky vong",
-  "Fed giu lai suat on dinh",
-  "BlackRock tang luong BTC nam giu",
-  "Doanh nghiep lon chap nhan thanh toan BTC",
-  "Hash rate dat dinh moi",
-  "Institutional adoption tang",
-  "ETF inflow ky luc",
-  "Gold tuong quan tich cuc voi BTC",
-  "Stablecoin flow vao san tang",
-  "Partnership voi ngan hang lon",
-  "Protocol upgrade thanh cong",
-  "Volume surge dang ke",
-  "Developer activity tang manh",
-  "On-chain metrics tich cuc",
-  "Supply giam do halving effect",
-  "DXY dollar index giam",
-  "BTC dominance tang",
-  "Payment integration moi",
-  "Grayscale GBTC premium tang",
-  "MicroStrategy mua them BTC",
-  "El Salvador tang tru luong BTC",
-  "Lightning Network adoption tang",
-  "Defi TVL tren Bitcoin tang",
-  "Fidelity mo dich vu custody BTC",
-  "JP Morgan nhan dinh tich cuc ve BTC",
-  "Hash rate phuc hoi sau ban",
-  "Binance Proof of Reserve on dinh",
-  "Bitcoin spot volume tang ky luc",
-  "Mining difficulty dieu chinh giam",
-  "Central bank mua vang ky luc - tot cho BTC",
-  "Nasdaq tuong quan tich cuc voi crypto",
-  "Layer 2 scaling giai phap moi",
-  "Fed pivot signal - thi truong ky vong ha lai suat",
-  "US Treasury yield giam - dong tien chay vao risk assets",
-  "Ordinals va BRC-20 tang adoption",
-  "Bitcoin ETF options duoc phe duyet",
-  "Tether tang in USDT - thanh khoan do vao",
-  "Coinbase bao cao doanh thu vuot ky vong",
-];
-
-const BEARISH_FACTORS = [
-  "SEC tu choi ETF moi",
-  "Whale ban ra manh",
-  "CPI cao hon ky vong",
-  "Fed tang lai suat",
-  "Quan ngai quy dinh moi tu Trung Quoc",
-  "Hack san giao dich lon",
-  "Miner selling ap luc tang",
-  "Liquidation lon tren thi truong",
-  "ETF outflow dang ke",
-  "Stablecoin outflow tu san",
-  "Regulatory risk tu EU",
-  "Exchange insolvency lo ngai",
-  "Chi so tham lam qua cao - rui ro dieu chinh",
-  "Dollar index tang manh",
-  "Bond yield tang - rui ro cho crypto",
-  "Volume giam - thanh khoan can",
-  "BTC dominance giam",
-  "Systemic risk lo ngai",
-  "Rug pull du an lon",
-  "Legal action chong lai founder",
-  "FTX su kien sap san",
-  "Terra Luna collapse anh huong",
-  "Celsius Network dong bang rut tien",
-  "Genesis Trading ngung hoat dong",
-  "Three Arrows Capital pha san",
-  "USDC depeg tam thoi",
-  "Mt. Gox phan phoi BTC cho chu no",
-  "SEC kien Binance va Coinbase",
-  "Silvergate Bank dong cua",
-  "Tether FUD - lo ngai du tru",
-  "mining ban tai Kazakhstan",
-  "Trung Quoc siet chat crypto lan nua",
-  "Iran cam mining tam thoi",
-  "US debt ceiling lo ngai",
-  "Grayscale GBTC discount mo rong",
-  "Leverage ratio qua cao - rui ro cascade liquidation",
-  "Dormant BTC wallet bat ngo chuyen tien",
-  "SEC dieu tra staking services",
-  "CBDC canh tranh voi crypto",
-  "Whale gui BTC len san voi so luong lon",
-];
-
-const NEUTRAL_FACTORS = [
-  "Thi truong di ngang cho tin hieu",
-  "Analyst nhan dinh phan chia",
-  "Bao cao nganh trung tinh",
-  "Protocol proposal dang xem xet",
-  "Developer milestone thong thuong",
-  "Sector rotation nhe",
-  "Market cap on dinh",
-  "On-chain flow binh thuong",
-  "Testnet moi dang thu nghiem",
-  "Industry report tong hop",
-  "Consolidation phase - thi truong tich luy",
-  "Funding rate trung tinh",
-  "Open interest on dinh",
-  "Hashrate on dinh khong doi",
-  "DXY di ngang",
-  "Macro data khong co gi dac biet",
-  "Options expiry cuoi tuan",
-  "Bitcoin Pizza Day - khong anh huong gia",
-  "Conference crypto tai chau Au",
-  "US Congress phien dieu tran ve crypto",
-];
-
-// ----------------------------------------------------------------
-// Text templates - DA DANG HON
-// ----------------------------------------------------------------
-
-const TEXT_TEMPLATES_BULL = [
-  "Thi truong co dau hieu tich cuc manh, nha dau tu lac quan.",
-  "Momentum tang ro ret, cac chi so ky thuat ung ho xu huong len.",
-  "Buy pressure tang dang ke, bulls nam quyen kiem soat.",
-  "Cau mua vuot cau ban, dong tien chay vao thi truong manh.",
-  "Breakout khoi vung khang cu, thi truong euphoric.",
-  "Smart money dang tich luy, tin hieu tich cuc dai han.",
-  "Thi truong risk-on, nha dau tu san sang chap nhan rui ro.",
-];
-
-const TEXT_TEMPLATES_BEAR = [
-  "Thi truong chiu ap luc ban manh, tam ly than trong.",
-  "Bears nam quyen, sell pressure tang cao.",
-  "Panic selling xuat hien, thi truong lo ngai.",
-  "Breakdown duoi vung ho tro, sentiment tieu cuc.",
-  "Dong tien rut ra, thanh khoan sut giam dang ke.",
-  "Capitulation phase, weak hands ban thao.",
-  "Fear lan rong, chi so tham lam giam manh.",
-];
-
-const TEXT_TEMPLATES_NEUTRAL = [
-  "Thi truong on dinh, cho tin hieu ro rang hon.",
-  "Range-bound trading, chua co xu huong ro.",
-  "Thi truong tich luy, ky vong doi tin hieu moi.",
-  "Consolidation phase, volume giao dich trung binh.",
-  "Thi truong bat dinh, nha dau tu ngoi ngoai.",
-];
-
-function generateText(
-  date: string,
-  price: number,
-  changePct: number,
-  factors: string[]
-): string {
-  const direction = changePct > 0 ? "tang" : changePct < 0 ? "giam" : "di ngang";
-  const absChange = Math.abs(changePct).toFixed(2);
-  const priceStr = price.toLocaleString("en-US", { maximumFractionDigits: 0 });
-
-  let text = `Ngay ${date}: BTC ${direction} ${absChange}%, gia hien tai $${priceStr}. `;
-
-  if (factors.length > 0) {
-    text += `Cac yeu to chinh: ${factors.slice(0, 3).join("; ")}. `;
-  }
-
-  let templates: string[];
-  if (changePct > 2) {
-    templates = TEXT_TEMPLATES_BULL;
-  } else if (changePct < -2) {
-    templates = TEXT_TEMPLATES_BEAR;
-  } else {
-    templates = TEXT_TEMPLATES_NEUTRAL;
-  }
-  text += templates[Math.floor(Math.random() * templates.length)];
-
-  return text;
+interface Regime {
+  name: string;
+  primaryFactors: string[];   // xuat hien thuong xuyen (70-90%)
+  secondaryFactors: string[]; // xuat hien it hon (20-40%)
+  priceBias: number;          // xu huong gia (-1 to 1)
+  volatility: [number, number]; // [min, max] %
+  duration: [number, number];   // [min, max] ngay
+  numFactors: [number, number]; // [min, max] so factors/ngay
 }
 
+const REGIMES: Record<string, Regime> = {
+  MACRO_TIGHTENING: {
+    name: "Macro Tightening",
+    primaryFactors: [
+      "Fed raises interest rate",
+      "CPI higher than expected",
+      "Dollar index surging",
+      "Bond yield rising - risk for crypto",
+      "Volume declining - liquidity drying up",
+      "US debt ceiling concerns",
+    ],
+    secondaryFactors: [
+      "Significant ETF outflows",
+      "Stablecoin outflows from exchanges",
+      "BTC dominance declining",
+      "Extreme greed index - correction risk",
+      "Regulatory risk from EU",
+      "Analyst opinions divided",
+      "Strong whale selling",
+      "Large market liquidations",
+      "Systemic risk concerns",
+    ],
+    priceBias: -0.6,
+    volatility: [1.5, 4.5],
+    duration: [14, 45],
+    numFactors: [2, 4],
+  },
+
+  CRYPTO_CONTAGION: {
+    name: "Crypto Contagion",
+    primaryFactors: [
+      "FTX exchange collapse event",
+      "Terra Luna collapse impact",
+      "Celsius Network freezes withdrawals",
+      "Genesis Trading halts operations",
+      "Three Arrows Capital bankruptcy",
+      "Exchange insolvency concerns",
+      "Large market liquidations",
+      "Systemic risk concerns",
+      "Strong whale selling",
+      "Whale sends large BTC to exchange",
+    ],
+    secondaryFactors: [
+      "Significant ETF outflows",
+      "USDC temporary depeg",
+      "Silvergate Bank closes",
+      "Leverage ratio too high - cascade liquidation risk",
+      "Dormant BTC wallet suddenly moves funds",
+      "Stablecoin outflows from exchanges",
+      "SEC investigates staking services",
+      "Volume declining - liquidity drying up",
+      "Fed raises interest rate",
+      "Regulatory risk from EU",
+      "CPI higher than expected",
+      "Miner selling pressure increasing",
+    ],
+    priceBias: -0.8,
+    volatility: [3, 12],
+    duration: [7, 30],
+    numFactors: [3, 5],
+  },
+
+  INSTITUTIONAL_BULL: {
+    name: "Institutional Bull Run",
+    primaryFactors: [
+      "Record ETF inflows",
+      "Institutional adoption increasing",
+      "Strong whale accumulation",
+      "BlackRock increases BTC holdings",
+      "MicroStrategy buys more BTC",
+      "Significant volume surge",
+      "Stablecoin inflows to exchanges rising",
+      "Grayscale GBTC premium rising",
+    ],
+    secondaryFactors: [
+      "SEC reviewing new ETF approval",
+      "Partnership with major bank",
+      "Major corporation accepts BTC payments",
+      "JP Morgan positive outlook on BTC",
+      "Fidelity opens BTC custody service",
+      "Bitcoin spot volume hits record",
+      "BTC dominance rising",
+      "New payment integration",
+      "Positive on-chain metrics",
+      "Coinbase revenue beats expectations",
+    ],
+    priceBias: 0.7,
+    volatility: [1, 5],
+    duration: [21, 60],
+    numFactors: [3, 5],
+  },
+
+  FED_PIVOT: {
+    name: "Fed Pivot / Rate Cut",
+    primaryFactors: [
+      "Fed holds interest rate steady",
+      "Fed pivot signal - market expects rate cut",
+      "CPI lower than expected",
+      "DXY dollar index declining",
+      "US Treasury yield falling - capital flows to risk assets",
+    ],
+    secondaryFactors: [
+      "Record ETF inflows",
+      "Institutional adoption increasing",
+      "Strong whale accumulation",
+      "Gold positively correlated with BTC",
+      "Nasdaq positively correlated with crypto",
+      "Stablecoin inflows to exchanges rising",
+      "Significant volume surge",
+      "BTC dominance rising",
+      "BlackRock increases BTC holdings",
+      "Positive on-chain metrics",
+    ],
+    priceBias: 0.5,
+    volatility: [1, 4],
+    duration: [14, 45],
+    numFactors: [2, 4],
+  },
+
+  MINING_STRESS: {
+    name: "Mining Sector Stress",
+    primaryFactors: [
+      "Mining difficulty adjustment decreasing",
+      "Hash rate recovering after sell-off",
+      "Miner selling pressure increasing",
+      "Mining ban in Kazakhstan",
+      "Iran temporary mining ban",
+      "China tightens crypto regulations again",
+    ],
+    secondaryFactors: [
+      "Strong whale selling",
+      "Large market liquidations",
+      "Dormant BTC wallet suddenly moves funds",
+      "Volume declining - liquidity drying up",
+      "On-chain Flow Anomaly",
+      "Systemic risk concerns",
+    ],
+    priceBias: -0.4,
+    volatility: [2, 6],
+    duration: [10, 30],
+    numFactors: [2, 4],
+  },
+
+  REGULATORY_CRACKDOWN: {
+    name: "Regulatory Crackdown",
+    primaryFactors: [
+      "SEC rejects new ETF",
+      "SEC sues Binance and Coinbase",
+      "SEC investigates staking services",
+      "Regulatory risk from EU",
+      "Regulatory concerns from China",
+      "CBDC competing with crypto",
+      "US Congress crypto hearing",
+    ],
+    secondaryFactors: [
+      "Significant ETF outflows",
+      "Exchange insolvency concerns",
+      "Legal action against founder",
+      "Tether FUD - reserve concerns",
+      "Volume declining - liquidity drying up",
+      "Strong whale selling",
+      "Stablecoin outflows from exchanges",
+      "Fed raises interest rate",
+      "Large market liquidations",
+      "CPI higher than expected",
+    ],
+    priceBias: -0.5,
+    volatility: [1.5, 5],
+    duration: [14, 60],
+    numFactors: [2, 4],
+  },
+
+  SUPPLY_SHOCK: {
+    name: "Supply Shock / Halving",
+    primaryFactors: [
+      "Supply decreasing due to halving effect",
+      "Hash rate hits new all-time high",
+      "Strong whale accumulation",
+      "BTC dominance rising",
+      "Significant volume surge",
+    ],
+    secondaryFactors: [
+      "Positive on-chain metrics",
+      "Institutional adoption increasing",
+      "Record ETF inflows",
+      "Lightning Network adoption growing",
+      "Ordinals and BRC-20 adoption growing",
+      "Bitcoin spot volume hits record",
+      "Mining difficulty adjustment decreasing",
+      "Developer activity surging",
+    ],
+    priceBias: 0.6,
+    volatility: [1.5, 5],
+    duration: [30, 90],
+    numFactors: [2, 4],
+  },
+
+  NEUTRAL_CONSOLIDATION: {
+    name: "Consolidation",
+    primaryFactors: [
+      "Market sideways waiting for signal",
+      "Consolidation phase - accumulation",
+      "Market cap stable",
+      "Neutral funding rate",
+      "Open interest stable",
+      "Hashrate unchanged",
+      "DXY sideways",
+      "No notable macro data",
+    ],
+    secondaryFactors: [
+      "Analyst opinions divided",
+      "Neutral industry report",
+      "Protocol proposal under review",
+      "Routine developer milestone",
+      "Minor sector rotation",
+      "Normal on-chain flow",
+      "New testnet under testing",
+      "Industry report compilation",
+      "Weekend options expiry",
+      "Crypto conference in Europe",
+    ],
+    priceBias: 0,
+    volatility: [0.3, 2],
+    duration: [7, 30],
+    numFactors: [1, 3],
+  },
+};
+
 // ----------------------------------------------------------------
-// Random helpers
+// Regime transition probabilities
+// Ma tran chuyen doi giua cac regime (giong Markov chain)
+// ----------------------------------------------------------------
+
+const REGIME_TRANSITIONS: Record<string, Record<string, number>> = {
+  MACRO_TIGHTENING: {
+    MACRO_TIGHTENING: 0.35,
+    CRYPTO_CONTAGION: 0.20,
+    NEUTRAL_CONSOLIDATION: 0.20,
+    REGULATORY_CRACKDOWN: 0.15,
+    FED_PIVOT: 0.10,
+  },
+  CRYPTO_CONTAGION: {
+    NEUTRAL_CONSOLIDATION: 0.30,
+    REGULATORY_CRACKDOWN: 0.25,
+    CRYPTO_CONTAGION: 0.20,
+    MACRO_TIGHTENING: 0.15,
+    FED_PIVOT: 0.10,
+  },
+  INSTITUTIONAL_BULL: {
+    INSTITUTIONAL_BULL: 0.35,
+    SUPPLY_SHOCK: 0.20,
+    NEUTRAL_CONSOLIDATION: 0.20,
+    MACRO_TIGHTENING: 0.15,
+    REGULATORY_CRACKDOWN: 0.10,
+  },
+  FED_PIVOT: {
+    INSTITUTIONAL_BULL: 0.35,
+    NEUTRAL_CONSOLIDATION: 0.25,
+    FED_PIVOT: 0.20,
+    SUPPLY_SHOCK: 0.15,
+    MACRO_TIGHTENING: 0.05,
+  },
+  MINING_STRESS: {
+    NEUTRAL_CONSOLIDATION: 0.30,
+    CRYPTO_CONTAGION: 0.20,
+    REGULATORY_CRACKDOWN: 0.20,
+    SUPPLY_SHOCK: 0.15,
+    MACRO_TIGHTENING: 0.15,
+  },
+  REGULATORY_CRACKDOWN: {
+    NEUTRAL_CONSOLIDATION: 0.30,
+    CRYPTO_CONTAGION: 0.20,
+    MACRO_TIGHTENING: 0.20,
+    REGULATORY_CRACKDOWN: 0.15,
+    FED_PIVOT: 0.15,
+  },
+  SUPPLY_SHOCK: {
+    INSTITUTIONAL_BULL: 0.35,
+    SUPPLY_SHOCK: 0.25,
+    NEUTRAL_CONSOLIDATION: 0.20,
+    MACRO_TIGHTENING: 0.10,
+    MINING_STRESS: 0.10,
+  },
+  NEUTRAL_CONSOLIDATION: {
+    INSTITUTIONAL_BULL: 0.20,
+    MACRO_TIGHTENING: 0.15,
+    FED_PIVOT: 0.15,
+    SUPPLY_SHOCK: 0.15,
+    REGULATORY_CRACKDOWN: 0.10,
+    MINING_STRESS: 0.10,
+    CRYPTO_CONTAGION: 0.05,
+    NEUTRAL_CONSOLIDATION: 0.10,
+  },
+};
+
+// ----------------------------------------------------------------
+// Text templates
+// ----------------------------------------------------------------
+
+const TEXT_TEMPLATES: Record<string, string[]> = {
+  bull: [
+    "Market showing strong positive signs, investors optimistic.",
+    "Clear upward momentum, technical indicators support bullish trend.",
+    "Buy pressure increasing significantly, bulls in control.",
+    "Smart money accumulating, positive long-term signal.",
+    "Risk-on market, investors willing to take risks.",
+  ],
+  bear: [
+    "Market under heavy selling pressure, cautious sentiment.",
+    "Bears in control, sell pressure elevated.",
+    "Panic selling emerging, market fearful.",
+    "Capital outflows, liquidity declining significantly.",
+    "Fear spreading, greed index dropping sharply.",
+  ],
+  neutral: [
+    "Market stable, waiting for clearer signals.",
+    "Range-bound trading, no clear trend yet.",
+    "Consolidation phase, average trading volume.",
+    "Uncertain market, investors on sidelines.",
+  ],
+};
+
+// ----------------------------------------------------------------
+// Helpers
 // ----------------------------------------------------------------
 
 function randBetween(min: number, max: number): number {
@@ -196,17 +358,43 @@ function randInt(min: number, max: number): number {
   return Math.floor(randBetween(min, max + 1));
 }
 
-function pickRandom<T>(arr: T[], count: number): T[] {
-  const shuffled = [...arr].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
-}
-
 function clamp(val: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, val));
 }
 
+function pickRandom<T>(arr: T[], count: number): T[] {
+  const shuffled = [...arr].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, Math.min(count, arr.length));
+}
+
+function weightedChoice(transitions: Record<string, number>): string {
+  const roll = Math.random();
+  let cumulative = 0;
+  for (const [state, prob] of Object.entries(transitions)) {
+    cumulative += prob;
+    if (roll <= cumulative) return state;
+  }
+  return Object.keys(transitions)[0];
+}
+
+function pickFromRegime(regime: Regime): string[] {
+  const numFactors = randInt(regime.numFactors[0], regime.numFactors[1]);
+
+  // Luon co it nhat 1 primary, phan con lai mix primary + secondary
+  // Giong that: 1-2 su kien chinh + 1-3 su kien lien quan/cascade
+  const numPrimary = randInt(1, Math.ceil(numFactors * 0.6));
+  const numSecondary = numFactors - numPrimary;
+
+  const factors = [
+    ...pickRandom(regime.primaryFactors, numPrimary),
+    ...pickRandom(regime.secondaryFactors, numSecondary),
+  ];
+
+  return [...new Set(factors)];
+}
+
 // ----------------------------------------------------------------
-// Generator chinh
+// Main generator
 // ----------------------------------------------------------------
 
 export function generateMockData(
@@ -216,117 +404,66 @@ export function generateMockData(
 ): DailyJsonInput[] {
   const results: DailyJsonInput[] = [];
 
-  // Khoi tao gia ban dau - range lon hon
   let price = randBetween(3000, 20000);
-  let trend = 0; // -1 bear, 0 neutral, 1 bull
-  let trendDaysLeft = 0;
-  let cyclePhase = 0; // 0-3: accumulation, markup, distribution, markdown
+  let currentRegime = "NEUTRAL_CONSOLIDATION";
+  let regimeDaysLeft = 0;
 
   for (let day = 0; day < numDays; day++) {
-    // Tinh ngay
     const d = new Date(startDate);
     d.setDate(d.getDate() + day);
     const dateStr = d.toISOString().slice(0, 10);
 
-    // Market cycle: thay doi moi ~600-900 ngay
-    if (day % randInt(600, 900) === 0) {
-      cyclePhase = (cyclePhase + 1) % 4;
+    // Regime transition khi het thoi gian
+    if (regimeDaysLeft <= 0) {
+      const transitions = REGIME_TRANSITIONS[currentRegime];
+      currentRegime = weightedChoice(transitions);
+      const regime = REGIMES[currentRegime];
+      regimeDaysLeft = randInt(regime.duration[0], regime.duration[1]);
     }
+    regimeDaysLeft--;
 
-    // Trend thay doi dinh ky - thoi gian da dang hon
-    if (trendDaysLeft <= 0) {
-      // Bias theo cycle phase
-      if (cyclePhase === 1) {
-        // markup: xu huong tang nhieu hon
-        trend = Math.random() < 0.7 ? 1 : randInt(-1, 0);
-      } else if (cyclePhase === 3) {
-        // markdown: xu huong giam nhieu hon
-        trend = Math.random() < 0.7 ? -1 : randInt(0, 1);
-      } else {
-        trend = randInt(-1, 1);
-      }
-      trendDaysLeft = randInt(5, 60); // 5-60 ngay moi trend (da dang hon)
-    }
-    trendDaysLeft--;
+    const regime = REGIMES[currentRegime];
 
-    // Gia thay doi random walk + trend bias - VOLATILITY CAO HON
-    const baseVolatility = randBetween(0.3, 5.5);
-    // Them black swan events (~2% ngay)
-    const isBlackSwan = Math.random() < 0.02;
-    const volatility = isBlackSwan ? randBetween(8, 15) : baseVolatility;
+    // Price change theo regime bias + noise
+    const vol = randBetween(regime.volatility[0], regime.volatility[1]);
+    const bias = regime.priceBias * randBetween(0.5, 2.0);
 
-    const trendBias = trend * randBetween(0.2, 2.0);
-    let priceChangePct = trendBias + randBetween(-volatility, volatility);
-
-    // Black swan co xu huong 1 phia
+    // 2% black swan trong regime bearish
+    const isBlackSwan = Math.random() < 0.02 && regime.priceBias < 0;
+    let priceChangePct = bias + randBetween(-vol, vol);
     if (isBlackSwan) {
-      priceChangePct = Math.random() < 0.6
-        ? -Math.abs(priceChangePct)  // 60% crash
-        : Math.abs(priceChangePct);  // 40% pump
+      priceChangePct = -Math.abs(priceChangePct) * randBetween(1.5, 3);
     }
 
     price = price * (1 + priceChangePct / 100);
-    price = clamp(price, 1000, 250000); // range gia lon hon
+    price = clamp(price, 1000, 250000);
 
-    // RSI: tuong quan nhung noise lon hon
-    const rsiBase = 50 + priceChangePct * randBetween(2, 5);
-    const rsi = clamp(rsiBase + randBetween(-15, 15), 5, 98);
+    // Factors tu regime (clustered, khong random)
+    const factors = pickFromRegime(regime);
 
-    // MSI: tuong quan voi trend nhung noise lon hon
-    const msiBase = 50 + trend * randBetween(8, 22);
-    const msi = clamp(msiBase + randBetween(-18, 18), 5, 98);
+    // Indicators tuong quan voi regime va price change
+    const rsiBase = 50 + priceChangePct * randBetween(2, 4) + regime.priceBias * 10;
+    const rsi = clamp(rsiBase + randBetween(-10, 10), 5, 98);
 
-    // Fear & Greed: da dang hon
-    const fgiBase = 50 + priceChangePct * randBetween(1, 4) + trend * randBetween(5, 15);
-    const fearGreedIndex = clamp(Math.round(fgiBase + randBetween(-15, 15)), 2, 98);
+    const msiBase = 50 + regime.priceBias * randBetween(10, 25);
+    const msi = clamp(msiBase + randBetween(-12, 12), 5, 98);
 
-    // Sentiment: noise lon hon
-    const sentimentBase = priceChangePct > 0
-      ? randBetween(0.1, 0.5)
-      : priceChangePct < 0
-        ? randBetween(-0.5, -0.1)
-        : 0;
-    const sentimentScoreAvg = clamp(
-      sentimentBase + randBetween(-0.5, 0.5),
-      -1, 1
-    );
+    const fgiBase = 50 + regime.priceBias * 20 + priceChangePct * 2;
+    const fearGreedIndex = clamp(Math.round(fgiBase + randBetween(-10, 10)), 2, 98);
 
-    // Factors: da dang hon, so luong thay doi nhieu hon
-    let factors: string[];
-    if (priceChangePct > 3) {
-      // Bullish manh: 3-5 factors
-      factors = pickRandom(BULLISH_FACTORS, randInt(3, 5));
-    } else if (priceChangePct > 1) {
-      // Nhe bullish: 2-3, co the pha 1 neutral
-      factors = pickRandom(BULLISH_FACTORS, randInt(2, 3));
-      if (Math.random() < 0.3) factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
-    } else if (priceChangePct < -3) {
-      // Bearish manh: 3-5 factors
-      factors = pickRandom(BEARISH_FACTORS, randInt(3, 5));
-    } else if (priceChangePct < -1) {
-      // Nhe bearish: 2-3, co the pha 1 neutral
-      factors = pickRandom(BEARISH_FACTORS, randInt(2, 3));
-      if (Math.random() < 0.3) factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
-    } else {
-      // Neutral: pha tron nhieu loai
-      const numFactors = randInt(1, 4);
-      factors = [];
-      for (let f = 0; f < numFactors; f++) {
-        const roll = Math.random();
-        if (roll < 0.4) {
-          factors.push(...pickRandom(NEUTRAL_FACTORS, 1));
-        } else if (roll < 0.7) {
-          factors.push(...pickRandom(BULLISH_FACTORS, 1));
-        } else {
-          factors.push(...pickRandom(BEARISH_FACTORS, 1));
-        }
-      }
-      // Loai bo trung lap
-      factors = [...new Set(factors)];
-    }
+    const sentimentBase = regime.priceBias * 0.3 + priceChangePct * 0.05;
+    const sentimentScoreAvg = clamp(sentimentBase + randBetween(-0.3, 0.3), -1, 1);
 
-    // Text tom tat
-    const text = generateText(dateStr, price, priceChangePct, factors);
+    // Text
+    const priceStr = price.toLocaleString("en-US", { maximumFractionDigits: 0 });
+    const dir = priceChangePct > 0 ? "up" : priceChangePct < 0 ? "down" : "flat";
+    const absChange = Math.abs(priceChangePct).toFixed(2);
+    let text = `${dateStr}: BTC ${dir} ${absChange}%, price $${priceStr}. `;
+    text += `Key factors: ${factors.slice(0, 3).join("; ")}. `;
+
+    const tplKey = priceChangePct > 1.5 ? "bull" : priceChangePct < -1.5 ? "bear" : "neutral";
+    const templates = TEXT_TEMPLATES[tplKey];
+    text += templates[Math.floor(Math.random() * templates.length)];
 
     results.push({
       date: dateStr,

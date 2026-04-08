@@ -1,5 +1,7 @@
 /**
- * SQLite database: luu tru JSON records + vectors.
+ * SQLite database: luu tru JSON records + type/group vectors.
+ *
+ * Schema v3: 2 cot vector (type_vec 62d, group_vec 13d) theo paper StockMem.
  */
 
 import Database from "better-sqlite3";
@@ -10,16 +12,18 @@ import { vectorize } from "./vectorize";
 
 const DB_DIR = path.resolve(__dirname, "..", "data");
 const DB_PATH = path.join(DB_DIR, "json-stockmem.db");
+const SCHEMA_VERSION = 3;
 
 let db: Database.Database | null = null;
 
 const SCHEMA_SQL = `
 CREATE TABLE IF NOT EXISTS daily_records (
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
-    date      TEXT    NOT NULL,
-    asset     TEXT    NOT NULL,
-    json_data TEXT    NOT NULL,
-    vector    TEXT    NOT NULL,
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    date        TEXT    NOT NULL,
+    asset       TEXT    NOT NULL,
+    json_data   TEXT    NOT NULL,
+    type_vec    TEXT    NOT NULL,
+    group_vec   TEXT    NOT NULL,
     UNIQUE(date, asset)
 );
 CREATE INDEX IF NOT EXISTS idx_daily_records_date ON daily_records(date);
@@ -30,7 +34,17 @@ export function getDb(): Database.Database {
   fs.mkdirSync(DB_DIR, { recursive: true });
   db = new Database(DB_PATH);
   db.pragma("journal_mode = WAL");
-  db.exec(SCHEMA_SQL);
+
+  const row = db.pragma("user_version") as Array<{ user_version: number }>;
+  const currentVersion = row[0]?.user_version ?? 0;
+  if (currentVersion < SCHEMA_VERSION) {
+    db.exec("DROP TABLE IF EXISTS daily_records");
+    db.exec(SCHEMA_SQL);
+    db.pragma(`user_version = ${SCHEMA_VERSION}`);
+  } else {
+    db.exec(SCHEMA_SQL);
+  }
+
   return db;
 }
 
@@ -41,32 +55,27 @@ export function closeDb(): void {
   }
 }
 
-/**
- * Chen 1 ban ghi JSON vao DB. Tu dong vectorize.
- */
 export function insertRecord(input: DailyJsonInput): number {
   const d = getDb();
   const vec = vectorize(input);
   const info = d.prepare(`
-    INSERT OR REPLACE INTO daily_records (date, asset, json_data, vector)
-    VALUES (?, ?, ?, ?)
+    INSERT OR REPLACE INTO daily_records (date, asset, json_data, type_vec, group_vec)
+    VALUES (?, ?, ?, ?, ?)
   `).run(
     input.date,
     input.asset,
     JSON.stringify(input),
-    JSON.stringify(vec)
+    JSON.stringify(vec.typeVec),
+    JSON.stringify(vec.groupVec)
   );
   return info.lastInsertRowid as number;
 }
 
-/**
- * Chen nhieu ban ghi (batch insert trong transaction).
- */
 export function insertRecords(inputs: DailyJsonInput[]): number[] {
   const d = getDb();
   const stmt = d.prepare(`
-    INSERT OR REPLACE INTO daily_records (date, asset, json_data, vector)
-    VALUES (?, ?, ?, ?)
+    INSERT OR REPLACE INTO daily_records (date, asset, json_data, type_vec, group_vec)
+    VALUES (?, ?, ?, ?, ?)
   `);
   const ids: number[] = [];
   const tx = d.transaction(() => {
@@ -76,7 +85,8 @@ export function insertRecords(inputs: DailyJsonInput[]): number[] {
         input.date,
         input.asset,
         JSON.stringify(input),
-        JSON.stringify(vec)
+        JSON.stringify(vec.typeVec),
+        JSON.stringify(vec.groupVec)
       );
       ids.push(info.lastInsertRowid as number);
     }
@@ -85,17 +95,11 @@ export function insertRecords(inputs: DailyJsonInput[]): number[] {
   return ids;
 }
 
-/**
- * Doc tat ca ban ghi tu DB.
- */
 export function getAllRecords(): StoredRecord[] {
   const d = getDb();
   return d.prepare("SELECT * FROM daily_records ORDER BY date").all() as StoredRecord[];
 }
 
-/**
- * Doc 1 ban ghi theo ID.
- */
 export function getRecordById(id: number): StoredRecord | null {
   const d = getDb();
   const row = d.prepare("SELECT * FROM daily_records WHERE id = ?").get(id) as StoredRecord | undefined;
@@ -103,17 +107,25 @@ export function getRecordById(id: number): StoredRecord | null {
 }
 
 /**
- * Dem so ban ghi.
+ * Lay N ban ghi truoc 1 ngay cu the (cho window query).
+ * Tra ve sorted by date DESC (can reverse khi dung).
  */
+export function getPrecedingRecords(date: string, asset: string, count: number): StoredRecord[] {
+  const d = getDb();
+  return d.prepare(
+    `SELECT * FROM daily_records
+     WHERE date < ? AND asset = ?
+     ORDER BY date DESC
+     LIMIT ?`
+  ).all(date, asset, count) as StoredRecord[];
+}
+
 export function countRecords(): number {
   const d = getDb();
   const row = d.prepare("SELECT COUNT(*) as cnt FROM daily_records").get() as any;
   return row.cnt;
 }
 
-/**
- * Xoa toan bo ban ghi (dung khi re-generate mock data).
- */
 export function clearAllRecords(): void {
   const d = getDb();
   d.prepare("DELETE FROM daily_records").run();

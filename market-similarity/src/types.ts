@@ -1,20 +1,42 @@
-import { z } from "zod";
+/**
+ * Kieu du lieu ket hop StockMem + History Rhymes:
+ * - Binary event vectors tu StockMem (Section 3.3)
+ * - Numerical concat voi α=0.5 tu History Rhymes (Khanna, 2024)
+ */
 
-export const MarketDaySchema = z.object({
-  date: z.string(),
-  price: z.number(),
-  arm: z.number(),
-  srm: z.number(),
-  factor_array: z.array(z.number()),
-  pct_change: z.number(),
-  text_summary: z.string(),
-});
+export interface DailyJsonInput {
+  date: string;
+  asset: string;
+  msi: number;
+  rsi: number;
+  sentiment_score_avg: number;
+  text: string;
+  factors: string[];
+  fear_greed_index: number;
+  price: number;
+  price_change_pct: number;
+}
 
-export type MarketDayInput = z.infer<typeof MarketDaySchema>;
+/** Joint vector: [typeVec_62; groupVec_13; α × numeric_5] → L2-normalized */
+export type JointVector = number[];
 
-export interface MarketDayRecord extends MarketDayInput {
+export interface StoredRecord {
   id: number;
-  hybrid_vector: Buffer | null;
-  num_dims: number;
-  created_at: string;
+  date: string;
+  asset: string;
+  json_data: string;
+  joint_vec: string; // JSON.stringify of JointVector
+}
+
+export interface SearchResult {
+  rank: number;
+  score: number;
+  record: DailyJsonInput;
+}
+
+export interface WindowSearchResult {
+  rank: number;
+  score: number;
+  daily_scores: number[];
+  window: DailyJsonInput[];
 }
